@@ -1,0 +1,25 @@
+.sectionTitle {
+    font-family: 'Outfit', sans-serif;
+    /* Consistent elegant font */
+    font-weight: 500;
+    /* Lighter weight for elegance */
+    text-transform: none;
+    /* Sentance case looks more natural/premium usually */
+    letter-spacing: -0.5px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    color: inherit;
+    line-height: 1.2;
+}
+
+.sectionText {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    /* Larger readable text */
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    line-height: 1.4;
+}
