@@ -61,3 +61,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log('Karen Explora: Protocolo de Belleza Natural Activado.');
+
+// Interview Slider Functionality
+const sliderContainer = document.getElementById('interview-slider');
+if (sliderContainer) {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            sliderContainer.scrollBy({
+                left: sliderContainer.offsetWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            sliderContainer.scrollBy({
+                left: -sliderContainer.offsetWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Hide buttons if at start/end - might be complex with scroll snap, 
+        // simple version handles navigation fine.
+    }
+}
