@@ -42,24 +42,7 @@
     margin: 10px 0 25px;
 }
 
-.stripeBtn {
-    background: #635bff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.stripeBtn:hover {
-    background: #534aeb;
-}
 
 /* Helper to reuse grid from global css if possible, but defining local */
 .grid2 {

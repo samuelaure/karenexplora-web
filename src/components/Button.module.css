@@ -1,0 +1,81 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    /* default border */
+    white-space: nowrap;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* --- Variants --- */
+
+/* Light: Used on dark backgrounds (Hero sections) */
+.light {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-color: var(--accent);
+    color: white;
+}
+
+.light:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(194, 168, 120, 0.2);
+}
+
+/* Dark: Used on light backgrounds (Sections with whitespace) */
+.dark {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.dark:hover {
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Accent: High visibility actions */
+.accent {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+.accent:hover {
+    background: var(--accent-glow);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Outline: Subtle secondary actions */
+.outline {
+    background: transparent;
+    border-color: currentColor;
+    color: inherit;
+}
+
+.outline:hover {
+    opacity: 0.7;
+}
+
+/* Full Width option */
+.full {
+    width: 100%;
+}

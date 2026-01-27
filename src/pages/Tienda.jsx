@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import styles from './Tienda.module.css';
 import FadeIn from '../components/FadeIn';
+import Button from '../components/Button';
 
 const Tienda = () => {
     return (
@@ -14,7 +15,7 @@ const Tienda = () => {
                         <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 'bold', display: 'block', marginBottom: '15px' }}>Edición Digital</span>
                         <h1 style={{ fontFamily: 'Playfair Display', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', lineHeight: '1.1', marginBottom: '20px' }}>Antropología dental en los indios soto...</h1>
                         <p style={{ fontSize: '1.3rem', opacity: 0.9, marginBottom: '40px' }}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
-                        <a href="#purchase" className="btn" style={{ background: 'var(--accent)', color: 'black', border: 'none', padding: '16px 32px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', borderRadius: '4px' }}>Descargar Libro Digital (PDF)</a>
+                        <Button href="#purchase" variant="accent">Descargar Libro Digital (PDF)</Button>
                     </FadeIn>
                 </div>
             </header>
@@ -92,7 +93,7 @@ const Tienda = () => {
                         <div className={styles.purchaseCard}>
                             <p style={{ textTransform: 'uppercase', fontSize: '0.8rem', opacity: 0.6, letterSpacing: '1px', color: 'black' }}>Apoya el legado</p>
                             <div className={styles.priceTag}>$19.99</div>
-                            <button className={styles.stripeBtn}>Adquirir Edición Digital</button>
+                            <Button variant="accent" style={{ background: '#635bff', borderColor: '#635bff' }}>Adquirir Edición Digital</Button>
                             <p style={{ fontSize: '0.75rem', marginTop: '20px', color: '#888' }}>Pago seguro procesado por Stripe</p>
                         </div>
                     </FadeIn>

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styles from './Home.module.css';
 import { ArrowRight } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
+import Button from '../components/Button';
 
 const Home = () => {
     const location = useLocation();
@@ -27,7 +28,7 @@ const Home = () => {
                     </FadeIn>
                     <FadeIn delay={0.4}>
                         <p className={styles.heroText}>Solo podemos proteger lo que conocemos, por eso te queremos mostrar cómo nuestro bienestar depende de la salud de nuestros ecosistemas.</p>
-                        <a href="#biodiversidad" className={styles.btn}>Explorar</a>
+                        <Button href="#biodiversidad" variant="light">Explorar</Button>
                     </FadeIn>
                 </div>
             </header>
@@ -56,7 +57,7 @@ const Home = () => {
                             <p className={styles.textLg} style={{ color: 'var(--text-dark)' }}>
                                 Más que un libro, un testimonio de la Venezuela inexplorada. Descubre este material invaluable digitalizado por primera vez.
                             </p>
-                            <a href="/tienda" className={styles.btn} style={{ borderColor: 'var(--primary)', color: 'var(--primary)' }}>Saber más y Comprar</a>
+                            <Button to="/tienda" variant="accent" style={{ color: 'white' }}>Saber más y Comprar</Button>
                         </FadeIn>
                     </div>
                 </div>
