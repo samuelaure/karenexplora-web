@@ -13,7 +13,7 @@ yarn-error.log*
 
 # Images/Assets downloaded during development
 downloaded_images/
-public/
+public/images/
 
 # Scripts and Tools
 *.js
