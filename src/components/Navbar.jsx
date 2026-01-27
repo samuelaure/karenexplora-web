@@ -19,7 +19,7 @@ const Navbar = () => {
     const isHome = location.pathname === '/';
 
     const navLinks = [
-        { name: 'Inicio', path: '/' },
+        { name: 'Inicio', path: isHome ? '#' : '/' },
         // Handle hash links. If on home, regular hash. If not, full path with hash.
         { name: 'Biodiversidad', path: isHome ? '#biodiversidad' : '/#biodiversidad' },
         { name: 'Exploración', path: isHome ? '#exploracion' : '/#exploracion' },

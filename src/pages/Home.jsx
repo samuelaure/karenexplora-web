@@ -64,19 +64,22 @@ const Home = () => {
             </section>
 
             {/* Amenazas Title */}
-            <section className="section-dark text-center">
-                <div className="container">
-                    <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Nuestros ecosistemas están en peligro</h2>
-                    <p className={styles.heroText}>Conoce qué los amenaza y qué podemos hacer para protegerlos.</p>
+            <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('/images/Minas_cerca_del_Guri.jpg')" }}>
+                <div className={styles.overlay}></div>
+                <div className={`container ${styles.relativeContent}`}>
+                    <FadeIn>
+                        <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Nuestros ecosistemas están en peligro</h2>
+                        <p className={styles.heroText}>Conoce qué los amenaza y qué podemos hacer para protegerlos.</p>
+                    </FadeIn>
                 </div>
             </section>
 
             {/* Biodiversidad */}
             <section id="biodiversidad" className="section-light">
                 <div className="container">
-                    <div className="text-center mb-16 max-w-2xl mx-auto">
+                    <div className="text-center mb-16 mx-auto">
                         <h2 className={styles.sectionTitle}>Conocer es proteger</h2>
-                        <p style={{ color: 'var(--text-dark)', opacity: 0.8 }}>Involucrarse es el paso necesario para que el conocimiento trascienda.</p>
+                        <p className={styles.heroText} style={{ color: 'var(--text-dark)', opacity: 0.8, maxWidth: '800px' }}>Involucrarse es el paso necesario para que el conocimiento trascienda.</p>
                     </div>
 
                     <div className={styles.grid3}>
@@ -114,7 +117,7 @@ const Home = () => {
                     <div className="text-center mb-16">
                         <FadeIn>
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Explora nuestra historia</h2>
-                            <p style={{ opacity: 0.8 }}>Una mirada profunda a nuestras expediciones y descubrimientos.</p>
+                            <p className={styles.heroText} style={{ opacity: 0.8 }}>Una mirada profunda a nuestras expediciones y descubrimientos.</p>
                         </FadeIn>
                     </div>
 
