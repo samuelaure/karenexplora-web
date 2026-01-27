@@ -1,4 +1,6 @@
-import { Instagram, Youtube, Twitter } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
+import { FaTiktok, FaPatreon } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
@@ -33,7 +35,15 @@ const Footer = () => {
                             <a href="https://youtube.com/@karenexplora" target="_blank" rel="noreferrer" className={styles.socialLink}>
                                 <Youtube size={18} /> YouTube
                             </a>
-                            {/* Added Twitter as placeholder for TikTok/Patreon if needed later */}
+                            <a href="https://x.com/karenexplora" target="_blank" rel="noreferrer" className={styles.socialLink}>
+                                <FaXTwitter size={18} /> X
+                            </a>
+                            <a href="https://www.tiktok.com/@karenexplora" target="_blank" rel="noreferrer" className={styles.socialLink}>
+                                <FaTiktok size={18} /> TikTok
+                            </a>
+                            <a href="https://www.patreon.com/Karenexplora" target="_blank" rel="noreferrer" className={styles.socialLink}>
+                                <FaPatreon size={18} /> Patreon
+                            </a>
                         </div>
                     </div>
                 </div>

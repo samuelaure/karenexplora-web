@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Youtube } from 'lucide-react';
+import { FaTiktok, FaPatreon } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -55,6 +57,15 @@ const Navbar = () => {
                     </a>
                     <a href="https://youtube.com/@karenexplora" target="_blank" rel="noreferrer" className={styles.socialIcon}>
                         <Youtube size={20} />
+                    </a>
+                    <a href="https://x.com/karenexplora" target="_blank" rel="noreferrer" className={styles.socialIcon}>
+                        <FaXTwitter size={20} />
+                    </a>
+                    <a href="https://www.tiktok.com/@karenexplora" target="_blank" rel="noreferrer" className={styles.socialIcon}>
+                        <FaTiktok size={20} />
+                    </a>
+                    <a href="https://www.patreon.com/Karenexplora" target="_blank" rel="noreferrer" className={styles.socialIcon}>
+                        <FaPatreon size={20} />
                     </a>
                 </div>
 
