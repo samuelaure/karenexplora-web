@@ -158,12 +158,54 @@ const Cronicas = () => {
                             <FadeIn key={index} delay={index * 0.1} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', overflow: 'hidden' }}>
                                 <img src={item.image} alt={item.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
                                 <div style={{ padding: '20px' }}>
-                                    <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--text)' }}>{item.title}</h3>
+                                    <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Outfit', marginBottom: '10px', color: 'var(--text)' }}>{item.title}</h3>
                                     <p style={{ fontSize: '0.9rem', marginBottom: '15px', opacity: 0.8, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.description}</p>
                                     <a href={item.link} target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: 'bold' }}>{item.buttonText}</a>
                                 </div>
                             </FadeIn>
                         ))}
+
+                    </div>
+                </div>
+            </section>
+
+            {/* Crónicas Section */}
+            <section className="section-light">
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                        <FadeIn>
+                            <p className={styles.sectionText} style={{ color: '#333' }}>Historias, anécdotas y expediciones.</p>
+                        </FadeIn>
+                    </div>
+
+                    <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+                        {/* Sierra de Imataca */}
+                        <FadeIn delay={0.1} style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '8px', overflow: 'hidden' }}>
+                            <img src="https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/cbc73761-0304-4e7b-972f-0697232ab131/16_Incendio_dentro.jpg" alt="Sierra de Imataca" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px' }}>
+                                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Outfit', marginBottom: '10px', color: '#000' }}>Sierra de Imataca</h3>
+                                <p style={{ fontSize: '0.9rem', marginBottom: '15px', color: '#333' }}>La selva más hermosa y abundante que he visto, hogar del águila harpía y mariposas danzantes en llamas</p>
+                            </div>
+                        </FadeIn>
+
+                        {/* Rescate de fauna Tocoma */}
+                        <FadeIn delay={0.2} style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '8px', overflow: 'hidden' }}>
+                            <img src="https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/56fcd51c-ee15-416f-a442-04d4ef2b106d/Screen+Shot+2020-07-01+at+11.45.50+AM.png" alt="Rescate de fauna Tocoma" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px' }}>
+                                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Outfit', marginBottom: '10px', color: '#000' }}>Rescate de fauna Tocoma</h3>
+                                <p style={{ fontSize: '0.9rem', marginBottom: '15px', color: '#333' }}>…Había un grupo de monos aulladores atrapados en la isla y era importante recuperarlos a todos juntos….</p>
+                                <a href="https://www.meer.com/es/28788-rescate-de-fauna-en-tocoma" target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: 'bold' }}>Sigue leyendo</a>
+                            </div>
+                        </FadeIn>
+
+                        {/* Cueva Charles Brewer */}
+                        <FadeIn delay={0.3} style={{ background: 'rgba(0,0,0,0.05)', borderRadius: '8px', overflow: 'hidden' }}>
+                            <img src="https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/e098d0e8-412d-4306-bc1e-656db263bebc/50_Charles+cueva+Charles+copy.jpg" alt="Cueva Charles Brewer" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                            <div style={{ padding: '20px' }}>
+                                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Outfit', marginBottom: '10px', color: '#000' }}>Cueva Charles Brewer</h3>
+                                <p style={{ fontSize: '0.9rem', marginBottom: '15px', color: '#333' }}>La expedición Muchimuk</p>
+                            </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
