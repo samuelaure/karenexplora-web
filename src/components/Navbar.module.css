@@ -1,0 +1,143 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.navScrolled {
+    background: rgba(5, 8, 5, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-weight: 300;
+    color: var(--accent);
+}
+
+.navLinks {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navLink {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    transition: var(--transition);
+}
+
+.navLink:hover {
+    color: var(--accent-glow);
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    transition: var(--transition);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.socialIcon:hover {
+    color: var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.mobileBtn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+    z-index: 999;
+}
+
+.mobileMenuOpen {
+    transform: translateX(0);
+}
+
+.mobileLink {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+@media (max-width: 900px) {
+
+    .navLinks,
+    .social {
+        display: none;
+    }
+
+    .mobileBtn {
+        display: block;
+    }
+}
