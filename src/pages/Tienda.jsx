@@ -7,10 +7,19 @@ const Tienda = () => {
     return (
         <div>
             <header className="hero" style={{
-                backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/30_Sarisarin%CC%83ama_Simas_Oblicuo+.jpg')",
-                height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: 'white', backgroundSize: 'cover', backgroundPosition: 'center'
+                backgroundImage: "url('/images/Charles-Brewer-C-1.jpg')",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                height: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                color: 'white',
+                position: 'relative'
             }}>
-                <div className="container" style={{ maxWidth: '900px' }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.8)', zIndex: 0 }}></div>
+                <div className="container" style={{ maxWidth: '900px', position: 'relative', zIndex: 1 }}>
                     <FadeIn>
                         <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 'bold', display: 'block', marginBottom: '15px' }}>Edición Digital</span>
                         <h1 style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', fontWeight: 'bold', fontSize: '6rem', lineHeight: '1.1', marginBottom: '20px' }}>Antropología dental en los indios soto...</h1>
