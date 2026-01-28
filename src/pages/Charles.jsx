@@ -1,3 +1,6 @@
+import FadeIn from '../components/FadeIn';
+import styles from './Charles.module.css';
+
 const videos = [
     { "title": "Gracias y feliz cumpleaños Charles Brewer-Carías!", "id": "o75Cm2cnmTI" },
     { "title": "La primera noche en el fondo de Sarisariñama Por Charles Brewer-Carías", "id": "EkWeTMHNFnQ" },
@@ -25,27 +28,23 @@ const videos = [
     { "title": "Charles Brewer Carias haciendo barras", "id": "U7fjpZWFl-4" }
 ];
 
-import FadeIn from '../components/FadeIn';
-
 const Charles = () => {
     return (
         <div>
-            <header className="hero" style={{ backgroundImage: "url('/images/50_Charles.jpg')", height: '60vh', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', textAlign: 'center', color: 'white' }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)' }}></div>
-                <div style={{ position: 'relative', zIndex: 1, padding: '20px' }}>
+            <header className="hero" style={{ backgroundImage: "url('/images/50_Charles.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', position: 'relative' }}>
+                <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
+                <div style={{ position: 'relative', zIndex: 1 }}>
                     <FadeIn>
-                        <h1 style={{ fontFamily: 'Playfair Display', fontSize: '3rem' }}>Charles Brewer-Carías</h1>
-                        <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>Escribiendo la historia natural de Venezuela a través de la exploración pura.</p>
+                        <h1 style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', fontWeight: 'bold', fontSize: '6rem', marginBottom: '20px' }}>Charles Brewer-Carías</h1>
+                        <p style={{ fontSize: '1.4rem', opacity: 0.9 }}>Escribiendo la historia natural de Venezuela a través de la exploración pura.</p>
                     </FadeIn>
                 </div>
             </header>
 
-            <section className="section-light text-center">
-                <div className="container">
-                    <FadeIn>
-                        <h2 style={{ fontSize: '2rem', fontFamily: 'Outfit', fontWeight: '600', marginBottom: '15px', color: 'var(--primary)' }}>El Legado del Explorador</h2>
-                        <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>Estamos digitalizando décadas de expediciones, hallazgos científicos y bitácoras de campo para compartir el conocimiento de una vida dedicada a la naturaleza.</p>
-                    </FadeIn>
+            <section className="section-light" style={{ padding: '60px 0 !important', textAlign: 'center' }}>
+                <div className="container" style={{ maxWidth: '1200px' }}>
+                    <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>El Legado del Explorador</h2>
+                    <p className={styles.sectionText} style={{ color: 'var(--dark)', textAlign: 'center' }}>Estamos digitalizando décadas de expediciones, hallazgos científicos y bitácoras de campo para compartir el conocimiento de una vida dedicada a la naturaleza.</p>
                 </div>
             </section>
 
@@ -53,25 +52,19 @@ const Charles = () => {
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <FadeIn>
-                            <h2 style={{ fontFamily: 'Outfit', fontSize: '2.5rem', marginBottom: '10px', color: 'white' }}>Videoteca</h2>
-                            <p style={{ opacity: 0.8 }}>Documentos audiovisuales de las expediciones y anécdotas.</p>
+                            <h2 className={styles.sectionTitle}>Videoteca</h2>
+                            <p className={styles.sectionText}>Documentos audiovisuales de las expediciones y anécdotas.</p>
                         </FadeIn>
                     </div>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                        gap: '30px'
-                    }}>
+                    <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '30px' }}>
                         {videos.map((video, idx) => (
                             <FadeIn key={video.id} delay={idx * 0.05} style={{
-                                background: 'var(--glass)',
-                                border: '1px solid var(--glass-border)',
+                                background: 'transparent',
                                 borderRadius: '12px',
-                                overflow: 'hidden',
-                                transition: 'transform 0.3s'
+                                overflow: 'hidden'
                             }}>
-                                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, borderRadius: '12px', overflow: 'hidden', marginBottom: '15px' }}>
                                     <iframe
                                         src={`https://www.youtube.com/embed/${video.id}`}
                                         title={video.title}
@@ -80,7 +73,7 @@ const Charles = () => {
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
                                     ></iframe>
                                 </div>
-                                <div style={{ padding: '15px', fontSize: '0.95rem', fontWeight: '600', color: 'var(--text)', lineHeight: '1.4' }}>
+                                <div style={{ fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'Outfit', color: 'var(--text)', lineHeight: '1.4' }}>
                                     {video.title}
                                 </div>
                             </FadeIn>
