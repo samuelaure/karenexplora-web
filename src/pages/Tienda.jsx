@@ -91,7 +91,7 @@ const Tienda = () => {
                         <div className={styles.purchaseCard}>
                             <p className={styles.supportLabel}>Apoya el legado</p>
                             <div className={styles.priceTag}>$19.99</div>
-                            <Button variant="accent" className={styles.purchaseButton}>Adquirir Edición Digital</Button>
+                            <Button href="https://buy.stripe.com/6oUdRagxT68cdva2Gf7Zu01" target="_blank" rel="noreferrer" variant="accent" className={styles.purchaseButton}>Adquirir Edición Digital</Button>
                             <p className={styles.secureText}>Pago seguro procesado por Stripe</p>
                         </div>
                     </FadeIn>
