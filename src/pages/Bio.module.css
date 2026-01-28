@@ -1,0 +1,111 @@
+/* Reuse common patterns but specific for Bio */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/karen_hero.jpg');
+    /* Need to ensure we have a fallback or a real image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Fallback background if image is missing */
+.hero {
+    background-color: var(--primary-dark);
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    color: white;
+}
+
+.heroTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 20px;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.linksSection {
+    background: var(--bg);
+    min-height: 50vh;
+    padding: 80px 0;
+}
+
+.linksGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.linkCard {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 20px 30px;
+    border-radius: var(--radius-md);
+    color: var(--text);
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.linkCard:hover {
+    background: var(--accent);
+    color: var(--bg-secondary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--accent);
+}
+
+.linkIcon {
+    font-size: 1.4rem;
+}
+
+.bioSection {
+    padding: 80px 0;
+    background: var(--secondary);
+    color: var(--text-dark);
+}
+
+.bioContent {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.sectionTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+    text-align: center;
+}

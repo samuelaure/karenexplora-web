@@ -18,6 +18,33 @@
 
 <body>
   <div id="root"></div>
+  <script type="text/javascript">
+    (function (d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function () {
+        const chat = window.voiceflow.chat;
+
+        chat.load({
+          verify: { projectID: '66e854fca9ce8dd052199fa8' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+
+        function openChat(event) {
+          event.preventDefault();
+          chat.open();
+        }
+
+        var btn = document.getElementById('openChat');
+        if (btn) {
+          btn.addEventListener('click', openChat);
+        }
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

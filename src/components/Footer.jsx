@@ -22,6 +22,7 @@ const Footer = () => {
                             <li><a href="/#exploracion" className={styles.link}>Exploración</a></li>
                             <li><Link to="/cronicas" className={styles.link}>Crónicas</Link></li>
                             <li><Link to="/charles" className={styles.link}>Charles</Link></li>
+                            <li><Link to="/bio" className={styles.link}>Bio</Link></li>
                             <li><Link to="/tienda" className={styles.link}>Tienda</Link></li>
                         </ul>
                     </div>
