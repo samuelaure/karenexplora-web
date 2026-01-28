@@ -51,7 +51,7 @@ const Footer = () => {
 
                 <div className={styles.bottom}>
                     <p>&copy; 2026 Karen Explora. Todos los derechos reservados.</p>
-                    <p>Diseño por Samuel Aure</p>
+                    <p><a href="https://www.samuelaure.com" target="_blank" rel="noreferrer" className={styles.designerLink}>naŭ</a></p>
                 </div>
             </div>
         </footer>

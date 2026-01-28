@@ -1,14 +1,5 @@
 import styles from './Bio.module.css';
 import FadeIn from '../components/FadeIn';
-import { ExternalLink, Youtube, Instagram, BookOpen } from 'lucide-react';
-
-const links = [
-    { title: "Plant trees in Brazil’s Atlantic Rainforest", url: "https://www.karenexplora.com/bio", icon: <ExternalLink size={20} /> }, // Placeholder URL as per request content, though the text implies a different link usually. I'll point to the bio for now or a generic one if I don't have it.
-    { title: "Canal de YouTube", url: "https://youtube.com/@karenexplora", icon: <Youtube size={20} /> },
-    { title: "Entrevista con National Geographic Esp.", url: "#", icon: <BookOpen size={20} /> },
-    { title: "Entrevista Distintas Latitudes", url: "#", icon: <BookOpen size={20} /> },
-    { title: "Encuentra mis publicaciones", url: "#", icon: <Instagram size={20} /> }
-];
 
 const Bio = () => {
     return (
@@ -18,33 +9,19 @@ const Bio = () => {
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <FadeIn>
-                        <h1 className={styles.heroTitle}>Karen Explora</h1>
+                        <h1 className={styles.heroTitle}>Karen<span>Explora</span></h1>
                         <p className={styles.heroSubtitle}>Exploradora. Fotógrafa. Divulgadora.</p>
+                        <button
+                            id="openChat"
+                            className={styles.linkCard}
+                            style={{ cursor: "pointer", maxWidth: "max-content", margin: "auto", marginTop: "80px", backgroundColor: "var(--accent)" }}
+                            onClick={() => window.voiceflow?.chat?.open()}
+                        >
+                            <span>Encuentra mis publicaciones</span>
+                        </button>
                     </FadeIn>
                 </div>
             </header>
-
-            {/* Links Section (Bio Style) */}
-            <section className={styles.linksSection}>
-                <div className="container">
-                    <FadeIn>
-                        <div className={styles.linksGrid}>
-                            {links.map((link, i) => (
-                                <a
-                                    key={i}
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className={styles.linkCard}
-                                >
-                                    {link.icon}
-                                    <span>{link.title}</span>
-                                </a>
-                            ))}
-                        </div>
-                    </FadeIn>
-                </div>
-            </section>
 
             {/* Extended Biography Section */}
             <section className={styles.bioSection}>
