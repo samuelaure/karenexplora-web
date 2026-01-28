@@ -3,6 +3,8 @@
     background-position: center;
     background-size: cover;
     height: 100vh;
+    height: 100dvh;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,4 +114,26 @@
     color: var(--primary);
     margin-bottom: 40px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: clamp(1.8rem, 10vw, 3.5rem);
+        letter-spacing: 2px;
+        padding: 0 15px;
+        /* Added padding to ensure it doesn't touch edges */
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
 }
