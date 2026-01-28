@@ -239,14 +239,30 @@
 }
 
 @media (max-width: 768px) {
+
     .hero {
-        min-height: 500px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        height: 100vh;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Default background, overridden by inline style usually */
+        background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .heroText {
+        margin-bottom: 0;
     }
 
     .sectionTitle {
         font-size: 2.5rem;
+        margin-bottom: 10px;
     }
 
     .textLg {
@@ -259,6 +275,12 @@
 
     .cardTitle {
         font-size: 1.4rem;
+    }
+
+    .grid3 {
+        display: grid;
+        /* Reduced minmax for better mobile fit */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .bookCard {

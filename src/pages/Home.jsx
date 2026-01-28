@@ -28,7 +28,7 @@ const Home = () => {
                     </FadeIn>
                     <FadeIn delay={0.4}>
                         <p className={styles.heroText}>Solo podemos proteger lo que conocemos, por eso te queremos mostrar cómo nuestro bienestar depende de la salud de nuestros ecosistemas.</p>
-                        <Button href="#biodiversidad" variant="light">Explorar</Button>
+                        <Button href="#biodiversidad" variant="light" style={{ marginTop: '2rem' }}>Explorar</Button>
                     </FadeIn>
                 </div>
             </header>
@@ -117,7 +117,7 @@ const Home = () => {
                     <div className="text-center mb-16">
                         <FadeIn>
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Explora nuestra historia</h2>
-                            <p className={styles.heroText} style={{ opacity: 0.8 }}>Una mirada profunda a nuestras expediciones y descubrimientos.</p>
+                            <p className={styles.heroText} style={{ opacity: 0.8, marginBottom: '1rem' }}>Una mirada profunda a nuestras expediciones y descubrimientos.</p>
                         </FadeIn>
                     </div>
 
@@ -171,12 +171,12 @@ const Home = () => {
             <section id="libros" className="section-light">
                 <div className="container">
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Otros Libros de la Colección</h2>
-                    <div className={styles.grid3} style={{ marginTop: '60px' }}>
+                    <p className="text-center italic opacity-60" style={{ color: 'var(--text-dark)' }}>Todavía no están disponibles para comprar</p>
+                    <div className={styles.grid3}>
                         <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.09.31+PM.png" alt="Libro 1" /></div>
                         <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.11.52+PM.png" alt="Libro 2" /></div>
                         <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.10.41+PM.png" alt="Libro 3" /></div>
                     </div>
-                    <p className="text-center mt-8 italic opacity-60" style={{ color: 'var(--text-dark)' }}>Todavía no están disponibles para comprar</p>
                 </div>
             </section>
         </div>
