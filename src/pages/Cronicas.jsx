@@ -5,7 +5,7 @@ import styles from './Cronicas.module.css';
 const Cronicas = () => {
     return (
         <div>
-            <header className="hero" style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg')", height: '60vh', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', position: 'relative' }}>
+            <header className="hero" style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg')", height: '100vh', backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', position: 'relative' }}>
                 <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
                 <div style={{ position: 'relative', zIndex: 1 }}>
                     <FadeIn>

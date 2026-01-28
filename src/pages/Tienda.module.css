@@ -1,15 +1,19 @@
 /* Reuse common patterns but specific for Tienda */
 .featureBox {
-    background: var(--glass);
+    background: #ffffff;
+    /* Clean white card for light background */
     padding: 30px;
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    /* Softened radius */
     transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 .featureBox:hover {
     border-color: var(--accent);
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .featureBox h3 {
@@ -68,12 +72,23 @@
 
 .sectionTitle {
     font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 25px;
-    color: var(--primary);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.5px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    color: inherit;
+    line-height: 1.2;
+}
+
+.sectionText {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 @media(max-width: 900px) {

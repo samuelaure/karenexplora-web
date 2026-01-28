@@ -7,14 +7,14 @@ const Tienda = () => {
     return (
         <div>
             <header className="hero" style={{
-                backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/30_Sarisarin%CC%83ama_Simas_Oblicuo+.jpg')",
-                height: '70vh', minHeight: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: 'white', backgroundSize: 'cover', backgroundPosition: 'center'
+                backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/30_Sarisarin%CC%83ama_Simas_Oblicuo+.jpg')",
+                height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: 'white', backgroundSize: 'cover', backgroundPosition: 'center'
             }}>
                 <div className="container" style={{ maxWidth: '900px' }}>
                     <FadeIn>
                         <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 'bold', display: 'block', marginBottom: '15px' }}>Edición Digital</span>
-                        <h1 style={{ fontFamily: 'Playfair Display', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', lineHeight: '1.1', marginBottom: '20px' }}>Antropología dental en los indios soto...</h1>
-                        <p style={{ fontSize: '1.3rem', opacity: 0.9, marginBottom: '40px' }}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
+                        <h1 style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', fontWeight: 'bold', fontSize: '6rem', lineHeight: '1.1', marginBottom: '20px' }}>Antropología dental en los indios soto...</h1>
+                        <p style={{ fontSize: '1.4rem', opacity: 0.9, marginBottom: '40px' }}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
                         <Button href="#purchase" variant="accent">Descargar Libro Digital (PDF)</Button>
                     </FadeIn>
                 </div>
@@ -24,8 +24,8 @@ const Tienda = () => {
                 <div className="container">
                     <div className={styles.grid2}>
                         <FadeIn direction="right" className="content-flex">
-                            <h2 className={styles.sectionTitle}>🧭 Mucho más allá de la Antropología</h2>
-                            <p style={{ fontSize: '1.25rem', opacity: 0.8, color: 'var(--text-dark)' }}>Aunque el rigor científico sobre la etnia Soto es fascinante, este libro abre una ventana única a las vivencias personales de Charles en el corazón de la Guayana.</p>
+                            <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>🧭 Mucho más allá de la Antropología</h2>
+                            <p className={styles.sectionText} style={{ color: 'var(--text-dark)', margin: 0, paddingLeft: 0 }}>Aunque el rigor científico sobre la etnia Soto es fascinante, este libro abre una ventana única a las vivencias personales de Charles en el corazón de la Guayana.</p>
                         </FadeIn>
                         <FadeIn direction="left">
                             <img src="/images/antropologia_dental.png" alt="Portada" className={styles.imgShadow} />
@@ -34,7 +34,7 @@ const Tienda = () => {
 
                     <div style={{ marginTop: '100px' }}>
                         <FadeIn>
-                            <h2 className={styles.sectionTitle} style={{ textAlign: 'center', marginBottom: '50px' }}>¿Qué descubrirás?</h2>
+                            <h2 className={styles.sectionTitle} style={{ textAlign: 'center', marginBottom: '50px', color: 'var(--primary)' }}>¿Qué descubrirás?</h2>
                         </FadeIn>
                         <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
                             <FadeIn delay={0.1} className={styles.featureBox}>
@@ -63,7 +63,7 @@ const Tienda = () => {
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left" className="content-flex">
                             <h2 className={styles.sectionTitle} style={{ color: 'white' }}>🦷 El Enigma de los Indios Soto</h2>
-                            <p style={{ fontSize: '1.25rem', opacity: 0.9 }}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
+                            <p className={styles.sectionText} style={{ margin: 0, textAlign: 'left' }}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
                         </FadeIn>
                         <FadeIn direction="right">
                             <img src="/images/enigma_soto.png" alt="Soto" className={styles.imgShadow} />
@@ -76,8 +76,8 @@ const Tienda = () => {
                 <div className="container">
                     <div className="text-center mb-16">
                         <FadeIn>
-                            <h2 className={styles.sectionTitle}>Un Legado compartido</h2>
-                            <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-dark)', opacity: 0.8 }}>Este libro es una pieza fundamental del archivo familiar que Karen Brewer-Carías ha decidido digitalizar.</p>
+                            <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>Un Legado compartido</h2>
+                            <p className={styles.sectionText} style={{ color: 'var(--text-dark)', opacity: 0.8 }}>Este libro es una pieza fundamental del archivo familiar que Karen Brewer-Carías ha decidido digitalizar.</p>
                         </FadeIn>
                     </div>
 
