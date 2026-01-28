@@ -26,7 +26,7 @@ const Tienda = () => {
                             <p className={`${styles.sectionText} ${styles.introText}`}>Aunque el rigor científico sobre la etnia Soto es fascinante, este libro abre una ventana única a las vivencias personales de Charles en el corazón de la Guayana.</p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <img src="/images/antropologia_dental.png" alt="Portada" className={styles.imgShadow} />
+                            <img src="/images/libro-antropologia-dental-indios-soto.png" alt="Portada" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -64,7 +64,7 @@ const Tienda = () => {
                             <p className={`${styles.sectionText} ${styles.enigmaText}`}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
                         </FadeIn>
                         <FadeIn direction="right">
-                            <img src="/images/enigma_soto.png" alt="Soto" className={styles.imgShadow} />
+                            <img src="/images/enigma-indios-soto-detail.png" alt="Soto" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
                 </div>

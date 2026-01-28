@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <div>
             {/* Hero Section */}
-            <header className={styles.hero} style={{ backgroundImage: "url('/images/Auyantepuy_Rio_Arcoiris_Segunda_muralla_3006.jpg')" }}>
+            <header className={styles.hero} style={{ backgroundImage: "url('/images/auyantepuy-tepui-venezuela.jpg')" }}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <FadeIn delay={0.2}>
@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="container">
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
-                            <img src="/images/antropologia_dental.png" alt="Antropología Dental" className={styles.imgShadow} />
+                            <img src="/images/libro-antropologia-dental-indios-soto.png" alt="Antropología Dental" className={styles.imgShadow} />
                         </FadeIn>
                         <FadeIn direction="left">
                             <span className={styles.cardTag}>Obra Destacada</span>
@@ -64,7 +64,7 @@ const Home = () => {
             </section>
 
             {/* Amenazas Title */}
-            <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('/images/Minas_cerca_del_Guri.jpg')" }}>
+            <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('/images/minas-guri-deforestacion-venezuela.jpg')" }}>
                 <div className={styles.overlay}></div>
                 <div className={`container ${styles.relativeContent}`}>
                     <FadeIn>
@@ -84,7 +84,7 @@ const Home = () => {
 
                     <div className={styles.grid3}>
                         <a href="https://www.instagram.com/proyectosebrabavzla/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/jaguar.jpeg" alt="Jaguares" />
+                            <img src="/images/jaguar-sebrava-venezuela.jpg" alt="Jaguares" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Jaguares</h3>
@@ -92,7 +92,7 @@ const Home = () => {
                             </div>
                         </a>
                         <a href="https://www.fundacion-esfera.org/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/aguila+harpia.jpeg" alt="Águila Harpía" />
+                            <img src="/images/aguila-harpia-venezuela.jpg" alt="Águila Harpía" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Águila Harpía</h3>
@@ -100,7 +100,7 @@ const Home = () => {
                             </div>
                         </a>
                         <a href="https://www.hatomasaguaral.org/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/caiman+del+orinoco.jpeg" alt="Caimán del Orinoco" />
+                            <img src="/images/caiman-orinoco-venezuela.jpg" alt="Caimán del Orinoco" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Caimán del Orinoco</h3>
@@ -128,7 +128,7 @@ const Home = () => {
                             <p className={styles.textLg}>Una expedición al corazón de los tepuyes venezolanos. Documentamos el misterio de las simas y la vida que en ellas florece.</p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <img src="/images/B+Awidi.jpg" alt="Sarisariñama" className={styles.imgShadow} />
+                            <img src="/images/sarisarinama-simas-landscape.jpg" alt="Sarisariñama" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -139,7 +139,7 @@ const Home = () => {
                             <p className={styles.textLg}>Viajamos con Río Verde por todo el país para mostrar los proyectos de conservación.</p>
                         </FadeIn>
                         <FadeIn direction="right">
-                            <img src="/images/Auyantepuy_Rio_Arcoiris_Segunda_muralla_3006.jpg" alt="Documentales" className={styles.imgShadow} />
+                            <img src="/images/auyantepuy-tepui-venezuela.jpg" alt="Documentales" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -150,7 +150,7 @@ const Home = () => {
                             <p className={styles.textLg}>Cada expedición nos revela secretos guardados por milenios, desde nuevas especies botánicas hasta formaciones geológicas.</p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <img src="/images/Sarisarin.jpg" alt="Descubrimientos" className={styles.imgShadow} />
+                            <img src="/images/sarisarinama-sinkholes-discovery.jpg" alt="Descubrimientos" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -161,7 +161,7 @@ const Home = () => {
                             <p className={styles.textLg}>Las cestas Mawadi y Esadi son portadoras de la historia y cosmovisión del pueblo Ye'Kwana.</p>
                         </FadeIn>
                         <FadeIn direction="right" className="flex justify-center">
-                            <img src="/images/Mawadi-esadiOK.jpg" alt="Cestería" style={{ borderRadius: '50%', width: '80%', aspectRatio: '1', objectFit: 'cover' }} />
+                            <img src="/images/cesteria-yekwana-mawadi.jpg" alt="Cestería" style={{ borderRadius: '50%', width: '80%', aspectRatio: '1', objectFit: 'cover' }} />
                         </FadeIn>
                     </div>
                 </div>
@@ -171,11 +171,11 @@ const Home = () => {
             <section id="libros" className="section-light">
                 <div className="container">
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Otros Libros de la Colección</h2>
-                    <p className="text-center italic opacity-60" style={{ color: 'var(--text-dark)' }}>Todavía no están disponibles para comprar</p>
+                    <p className="text-center italic opacity-60" style={{ color: 'var(--text-dark)', marginBottom: '3rem' }}>Todavía no están disponibles para comprar</p>
                     <div className={styles.grid3}>
-                        <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.09.31+PM.png" alt="Libro 1" /></div>
-                        <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.11.52+PM.png" alt="Libro 2" /></div>
-                        <div className={styles.bookCard}><img src="/images/Screen+Shot+2023-02-06+at+11.10.41+PM.png" alt="Libro 3" /></div>
+                        <div className={styles.bookCard}><img src="/images/libro-cerro-de-la-neblina.png" alt="Libro 1" /></div>
+                        <div className={styles.bookCard}><img src="/images/libro-venezuela-es-mucho-mas.png" alt="Libro 2" /></div>
+                        <div className={styles.bookCard}><img src="/images/libro-mundo-perdido.png" alt="Libro 3" /></div>
                     </div>
                 </div>
             </section>

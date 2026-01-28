@@ -26,7 +26,7 @@
 
 /* === Hero === */
 .hero {
-    background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
+    background-image: url('/images/auyantepuy-helicoptero.jpg');
     height: 100vh;
     min-height: 400px;
     background-position: center;
@@ -70,6 +70,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+}
+
+.storiesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.storiesGrid>* {
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 /* === Card Styles === */

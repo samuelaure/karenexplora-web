@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     /* Default background, overridden by inline style usually */
-    background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
+    background-image: url('/images/auyantepuy-helicoptero.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -247,7 +247,7 @@
         align-items: center;
         justify-content: center;
         /* Default background, overridden by inline style usually */
-        background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
+        background-image: url('/images/auyantepuy-helicoptero.jpg');
         background-size: cover;
         background-position: center;
         position: relative;

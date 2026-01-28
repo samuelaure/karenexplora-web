@@ -13,6 +13,8 @@ dist-ssr
 *.local
 
 commit_msg.txt
+_trash/
+_legacy/
 
 # Editor directories and files
 .vscode/*
