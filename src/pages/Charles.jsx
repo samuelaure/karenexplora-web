@@ -31,17 +31,17 @@ const videos = [
 const Charles = () => {
     return (
         <div>
-            <header className="hero" style={{ backgroundImage: "url('/images/50_Charles.jpg')", backgroundPosition: 'center', backgroundSize: 'cover', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', position: 'relative' }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
-                <div style={{ position: 'relative', zIndex: 1 }}>
+            <header className={styles.hero}>
+                <div className={styles.heroOverlay}></div>
+                <div className={styles.heroContent}>
                     <FadeIn>
-                        <h1 style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', fontWeight: 'bold', fontSize: '6rem', marginBottom: '20px' }}>Charles Brewer-Carías</h1>
-                        <p style={{ fontSize: '1.4rem', opacity: 0.9 }}>Escribiendo la historia natural de Venezuela a través de la exploración pura.</p>
+                        <h1 className={styles.heroTitle}>Charles Brewer-Carías</h1>
+                        <p className={styles.heroSubtitle}>Escribiendo la historia natural de Venezuela a través de la exploración pura.</p>
                     </FadeIn>
                 </div>
             </header>
 
-            <section className="section-light" style={{ padding: '60px 0 !important', textAlign: 'center' }}>
+            <section className="section-light" style={{ padding: '60px 0', textAlign: 'center' }}>
                 <div className="container" style={{ maxWidth: '1200px' }}>
                     <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>El Legado del Explorador</h2>
                     <p className={styles.sectionText} style={{ color: 'var(--dark)', textAlign: 'center' }}>Estamos digitalizando décadas de expediciones, hallazgos científicos y bitácoras de campo para compartir el conocimiento de una vida dedicada a la naturaleza.</p>
@@ -57,23 +57,19 @@ const Charles = () => {
                         </FadeIn>
                     </div>
 
-                    <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '30px' }}>
+                    <div className={styles.videoGrid}>
                         {videos.map((video, idx) => (
-                            <FadeIn key={video.id} delay={idx * 0.05} style={{
-                                background: 'transparent',
-                                borderRadius: '12px',
-                                overflow: 'hidden'
-                            }}>
-                                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, borderRadius: '12px', overflow: 'hidden', marginBottom: '15px' }}>
+                            <FadeIn key={video.id} delay={idx * 0.05} className={styles.videoCard}>
+                                <div className={styles.videoWrapper}>
                                     <iframe
                                         src={`https://www.youtube.com/embed/${video.id}`}
                                         title={video.title}
                                         allowFullScreen
                                         loading="lazy"
-                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                                        className={styles.videoIframe}
                                     ></iframe>
                                 </div>
-                                <div style={{ fontSize: '1.1rem', fontWeight: 'bold', fontFamily: 'Outfit', color: 'var(--text)', lineHeight: '1.4' }}>
+                                <div className={styles.videoTitle}>
                                     {video.title}
                                 </div>
                             </FadeIn>

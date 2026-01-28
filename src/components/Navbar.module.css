@@ -36,6 +36,9 @@
     font-family: 'Outfit', sans-serif;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1001;
+    /* Ensure logo is above menu if desired */
 }
 
 .logo span {
@@ -100,6 +103,9 @@
     border: none;
     color: white;
     cursor: pointer;
+    position: relative;
+    z-index: 1002;
+    /* Higher than mobileMenu */
 }
 
 /* Mobile Menu */

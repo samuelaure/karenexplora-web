@@ -9,12 +9,12 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className="container">
                 <div className={styles.grid}>
-                    <div>
+                    <div className={styles.footerList}>
                         <Link to="/" className={styles.logo}>Karen<span>Explora</span></Link>
                         <p className={styles.tagline}>Si la naturaleza está bien, nosotros también.</p>
                     </div>
 
-                    <div>
+                    <div className={styles.footerList}>
                         <h4 className={styles.heading}>Navegación</h4>
                         <ul className={styles.linkList}>
                             <li><Link to="/" className={styles.link}>Inicio</Link></li>
@@ -26,7 +26,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className={styles.footerList}>
                         <h4 className={styles.heading}>Sígueme</h4>
                         <div className={styles.socialList}>
                             <a href="https://instagram.com/karenexplora" target="_blank" rel="noreferrer" className={styles.socialLink}>

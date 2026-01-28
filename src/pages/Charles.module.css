@@ -19,3 +19,97 @@
     font-weight: 300;
     line-height: 1.4;
 }
+
+/* === Hero === */
+.hero {
+    background-image: url('/images/50_Charles.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.heroTitle {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.heroSubtitle {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* === Video Grid === */
+.videoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.videoCard {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.videoIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.videoTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Outfit';
+    color: var(--text);
+    line-height: 1.4;
+}
+
+@media(max-width: 768px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .videoGrid {
+        grid-template-columns: 1fr;
+    }
+}

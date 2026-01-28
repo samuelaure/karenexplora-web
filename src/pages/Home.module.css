@@ -1,19 +1,18 @@
 /* --- Hero --- */
 .hero {
     height: 100vh;
+    height: 100dvh;
     min-height: 800px;
-    /* Increased min-height */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Default background, overridden by inline style usually */
     background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
-    /* Default or passed as style */
     background-size: cover;
     background-position: center;
     position: relative;
     text-align: center;
     padding-top: 60px;
-    /* Increased padding to clear navbar */
     padding-bottom: 60px;
 }
 
@@ -36,14 +35,12 @@
 
 .heroTitle {
     font-family: 'Outfit', sans-serif;
-    /* Use serif for main title for premium feel */
     font-weight: 700;
     text-transform: none;
-    /* Uppercase can be hard to read for long titles */
     letter-spacing: -1px;
-    font-size: clamp(4rem, 8vw, 6rem);
-    /* Slightly larger max size */
-    line-height: 1;
+    /* Adjusted clamp for better mobile scaling */
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    line-height: 1.1;
     margin-bottom: 25px;
     color: #fff;
     text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
@@ -51,7 +48,6 @@
 
 .heroText {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    /* Larger readable text */
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 50px;
     max-width: 700px;
@@ -60,8 +56,6 @@
     font-weight: 300;
     line-height: 1.4;
 }
-
-
 
 /* --- Quote --- */
 .quoteTitle {
@@ -101,13 +95,10 @@
 
 .sectionTitle {
     font-family: 'Outfit', sans-serif;
-    /* Consistent elegant font */
     font-weight: 500;
-    /* Lighter weight for elegance */
     text-transform: none;
-    /* Sentance case looks more natural/premium usually */
     letter-spacing: -0.5px;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     margin-bottom: 20px;
     color: inherit;
     line-height: 1.2;
@@ -119,18 +110,19 @@
     opacity: 0.85;
     line-height: 1.7;
     max-width: 600px;
-    /* Constrain width for readability */
 }
 
 .imgShadow {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    width: 100%;
 }
 
 /* --- Setup Grid & Cards --- */
 .grid3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Reduced minmax for better mobile fit */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
 }
 
@@ -184,7 +176,6 @@
 /* --- Books --- */
 .bookCard {
     height: 450px;
-    /* Fixed height container */
     background: transparent;
     border: none;
     box-shadow: none;
@@ -198,7 +189,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Ensures cover is visible without stretching */
     border-radius: 4px;
     transition: transform 0.4s ease;
 }
@@ -228,7 +218,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    /* Dark overlay */
     z-index: 1;
 }
 
@@ -246,5 +235,38 @@
 
     .reverse {
         direction: ltr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .sectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .textLg {
+        font-size: 1.1rem;
+    }
+
+    .cardContent {
+        padding: 20px;
+    }
+
+    .cardTitle {
+        font-size: 1.4rem;
+    }
+
+    .bookCard {
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .amenazasSection {
+        padding: 80px 0;
     }
 }

@@ -6,24 +6,13 @@ import Button from '../components/Button';
 const Tienda = () => {
     return (
         <div>
-            <header className="hero" style={{
-                backgroundImage: "url('/images/Charles-Brewer-C-1.jpg')",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                height: '100vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                color: 'white',
-                position: 'relative'
-            }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.8)', zIndex: 0 }}></div>
-                <div className="container" style={{ maxWidth: '900px', position: 'relative', zIndex: 1 }}>
+            <header className={styles.hero}>
+                <div className={styles.heroOverlay}></div>
+                <div className={`container ${styles.heroContent}`}>
                     <FadeIn>
-                        <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)', fontWeight: 'bold', display: 'block', marginBottom: '15px' }}>Edición Digital</span>
-                        <h1 style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', fontWeight: 'bold', fontSize: '6rem', lineHeight: '1.1', marginBottom: '20px' }}>Antropología dental en los indios soto...</h1>
-                        <p style={{ fontSize: '1.4rem', opacity: 0.9, marginBottom: '40px' }}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
+                        <span className={styles.heroSubtitle}>Edición Digital</span>
+                        <h1 className={styles.heroTitle}>Antropología dental en los indios soto...</h1>
+                        <p className={styles.heroDescription}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
                         <Button href="#purchase" variant="accent">Descargar Libro Digital (PDF)</Button>
                     </FadeIn>
                 </div>
@@ -33,19 +22,19 @@ const Tienda = () => {
                 <div className="container">
                     <div className={styles.grid2}>
                         <FadeIn direction="right" className="content-flex">
-                            <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>🧭 Mucho más allá de la Antropología</h2>
-                            <p className={styles.sectionText} style={{ color: 'var(--text-dark)', margin: 0, paddingLeft: 0 }}>Aunque el rigor científico sobre la etnia Soto es fascinante, este libro abre una ventana única a las vivencias personales de Charles en el corazón de la Guayana.</p>
+                            <h2 className={styles.sectionTitle}>🧭 Mucho más allá de la Antropología</h2>
+                            <p className={`${styles.sectionText} ${styles.introText}`}>Aunque el rigor científico sobre la etnia Soto es fascinante, este libro abre una ventana única a las vivencias personales de Charles en el corazón de la Guayana.</p>
                         </FadeIn>
                         <FadeIn direction="left">
                             <img src="/images/antropologia_dental.png" alt="Portada" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
-                    <div style={{ marginTop: '100px' }}>
+                    <div className={styles.discoverySection}>
                         <FadeIn>
-                            <h2 className={styles.sectionTitle} style={{ textAlign: 'center', marginBottom: '50px', color: 'var(--primary)' }}>¿Qué descubrirás?</h2>
+                            <h2 className={`${styles.sectionTitle} ${styles.discoveryTitle}`}>¿Qué descubrirás?</h2>
                         </FadeIn>
-                        <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+                        <div className={styles.featuresGrid}>
                             <FadeIn delay={0.1} className={styles.featureBox}>
                                 <h3>Crónicas de lo Inexplorado</h3>
                                 <p>Relatos directos de expediciones en territorios donde los mapas aún tenían espacios en blanco.</p>
@@ -71,8 +60,8 @@ const Tienda = () => {
                 <div className="container">
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left" className="content-flex">
-                            <h2 className={styles.sectionTitle} style={{ color: 'white' }}>🦷 El Enigma de los Indios Soto</h2>
-                            <p className={styles.sectionText} style={{ margin: 0, textAlign: 'left' }}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
+                            <h2 className={styles.sectionTitle}>🦷 El Enigma de los Indios Soto</h2>
+                            <p className={`${styles.sectionText} ${styles.enigmaText}`}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
                         </FadeIn>
                         <FadeIn direction="right">
                             <img src="/images/enigma_soto.png" alt="Soto" className={styles.imgShadow} />
@@ -85,25 +74,25 @@ const Tienda = () => {
                 <div className="container">
                     <div className="text-center mb-16">
                         <FadeIn>
-                            <h2 className={styles.sectionTitle} style={{ color: 'var(--primary)' }}>Un Legado compartido</h2>
-                            <p className={styles.sectionText} style={{ color: 'var(--text-dark)', opacity: 0.8 }}>Este libro es una pieza fundamental del archivo familiar que Karen Brewer-Carías ha decidido digitalizar.</p>
+                            <h2 className={styles.sectionTitle}>Un Legado compartido</h2>
+                            <p className={`${styles.sectionText} ${styles.legacyText}`}>Este libro es una pieza fundamental del archivo familiar que Karen Brewer-Carías ha decidido digitalizar.</p>
                         </FadeIn>
                     </div>
 
-                    <FadeIn direction="up" className={styles.grid2} style={{ background: '#f8f9fa', borderRadius: '20px', padding: '60px', boxShadow: '0 10px 40px rgba(0,0,0,0.05)' }}>
+                    <FadeIn direction="up" className={`${styles.grid2} ${styles.purchaseContainer}`}>
                         <div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: 'var(--primary)', fontFamily: 'Outfit' }}>Detalles de tu descarga</h3>
-                            <ul style={{ listStyle: 'none' }}>
-                                <li style={{ marginBottom: '15px', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', gap: '10px' }}><Check color="var(--accent)" size={20} /> <strong>Autor:</strong> Charles Brewer-Carías</li>
-                                <li style={{ marginBottom: '15px', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', gap: '10px' }}><Check color="var(--accent)" size={20} /> <strong>Formato:</strong> PDF de alta calidad</li>
-                                <li style={{ marginBottom: '15px', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', gap: '10px' }}><Check color="var(--accent)" size={20} /> <strong>Acceso:</strong> Inmediato tras la compra</li>
+                            <h3 className={styles.downloadTitle}>Detalles de tu descarga</h3>
+                            <ul className={styles.purchaseList}>
+                                <li className={styles.purchaseListItem}><Check color="var(--accent)" size={20} /> <strong>Autor:</strong> Charles Brewer-Carías</li>
+                                <li className={styles.purchaseListItem}><Check color="var(--accent)" size={20} /> <strong>Formato:</strong> PDF de alta calidad</li>
+                                <li className={styles.purchaseListItem}><Check color="var(--accent)" size={20} /> <strong>Acceso:</strong> Inmediato tras la compra</li>
                             </ul>
                         </div>
                         <div className={styles.purchaseCard}>
-                            <p style={{ textTransform: 'uppercase', fontSize: '0.8rem', opacity: 0.6, letterSpacing: '1px', color: 'black' }}>Apoya el legado</p>
+                            <p className={styles.supportLabel}>Apoya el legado</p>
                             <div className={styles.priceTag}>$19.99</div>
-                            <Button variant="accent" style={{ background: '#635bff', borderColor: '#635bff' }}>Adquirir Edición Digital</Button>
-                            <p style={{ fontSize: '0.75rem', marginTop: '20px', color: '#888' }}>Pago seguro procesado por Stripe</p>
+                            <Button variant="accent" className={styles.purchaseButton}>Adquirir Edición Digital</Button>
+                            <p className={styles.secureText}>Pago seguro procesado por Stripe</p>
                         </div>
                     </FadeIn>
                 </div>

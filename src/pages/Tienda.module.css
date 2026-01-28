@@ -68,6 +68,8 @@
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .sectionTitle {
@@ -91,12 +93,202 @@
     line-height: 1.4;
 }
 
+/* === Refactored Styles for Responsiveness === */
+
+.hero {
+    background-image: url('/images/Charles-Brewer-C-1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+}
+
+.heroSubtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.heroTitle {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.heroDescription {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.purchaseContainer {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.purchaseList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.purchaseListItem {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discoverySection {
+    margin-top: 100px;
+}
+
+.discoveryTitle {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+.downloadTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-family: 'Outfit', sans-serif;
+}
+
+.supportLabel {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.purchaseButton {
+    background: #635bff !important;
+    border-color: #635bff !important;
+}
+
+.secureText {
+    font-size: 0.75rem;
+    margin-top: 20px;
+    color: #888;
+}
+
+.introText {
+    color: var(--text-dark);
+    margin: 0;
+    padding-left: 0;
+}
+
+.enigmaText {
+    margin: 0;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.legacyText {
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
 @media(max-width: 900px) {
     .grid2 {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .reverse {
         direction: ltr;
+        display: flex;
+        flex-direction: column-reverse;
+        /* Better than direction: ltr for semantic ordering if needed, but grid 1fr auto stacks. Direction ltr just resets rtl. */
+    }
+
+    /* Reset override for grid2 reverse if it was using rtl */
+    /* The original code had direction: rtl on .reverse. We simply want to stack them naturally or reverse specific items. */
+
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+
+    .heroDescription {
+        font-size: 1.2rem;
+    }
+
+    .purchaseContainer {
+        padding: 40px;
+    }
+
+    .discoverySection {
+        margin-top: 60px;
+    }
+}
+
+@media(max-width: 600px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroDescription {
+        font-size: 1rem;
+    }
+
+    .purchaseContainer {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .featureBox {
+        padding: 20px;
+    }
+
+    .priceTag {
+        font-size: 2.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .discoveryTitle {
+        margin-bottom: 30px;
     }
 }

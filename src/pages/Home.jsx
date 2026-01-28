@@ -124,7 +124,7 @@ const Home = () => {
                     {/* Cronicas */}
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
-                            <h2 className={styles.sectionTitle} style={{ color: '#fff', fontSize: '2.5rem' }}>Crónicas de la Selva</h2>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Crónicas de la Selva</h2>
                             <p className={styles.textLg}>Una expedición al corazón de los tepuyes venezolanos. Documentamos el misterio de las simas y la vida que en ellas florece.</p>
                         </FadeIn>
                         <FadeIn direction="left">
@@ -135,7 +135,7 @@ const Home = () => {
                     {/* Documentales */}
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left">
-                            <h2 className={styles.sectionTitle} style={{ color: '#fff', fontSize: '2.5rem' }}>Documentales</h2>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Documentales</h2>
                             <p className={styles.textLg}>Viajamos con Río Verde por todo el país para mostrar los proyectos de conservación.</p>
                         </FadeIn>
                         <FadeIn direction="right">
@@ -146,7 +146,7 @@ const Home = () => {
                     {/* Descubrimientos */}
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
-                            <h2 className={styles.sectionTitle} style={{ color: '#fff', fontSize: '2.5rem' }}>Descubrimientos</h2>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Descubrimientos</h2>
                             <p className={styles.textLg}>Cada expedición nos revela secretos guardados por milenios, desde nuevas especies botánicas hasta formaciones geológicas.</p>
                         </FadeIn>
                         <FadeIn direction="left">
@@ -157,7 +157,7 @@ const Home = () => {
                     {/* Cesteria */}
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left">
-                            <h2 className={styles.sectionTitle} style={{ color: '#fff', fontSize: '2.5rem' }}>Cestería Ye’Kwana</h2>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Cestería Ye’Kwana</h2>
                             <p className={styles.textLg}>Las cestas Mawadi y Esadi son portadoras de la historia y cosmovisión del pueblo Ye'Kwana.</p>
                         </FadeIn>
                         <FadeIn direction="right" className="flex justify-center">

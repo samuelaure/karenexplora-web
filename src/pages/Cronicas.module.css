@@ -23,3 +23,118 @@
     font-weight: 300;
     line-height: 1.4;
 }
+
+/* === Hero === */
+.hero {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/63d6a06c1ec3d51b881f3ea7/3b9a5ae8-22a3-47b5-8db5-e0e2f49de130/Auyan_helivopter9504.jpg');
+    height: 100vh;
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+}
+
+.heroTitle {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.heroSubtitle {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* === Grids === */
+.gridPrensa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* === Card Styles === */
+.cardDark {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardLight {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 20px;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Outfit';
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.cardTitleDark {
+    color: #000;
+}
+
+.cardDesc {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.cardLink {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media(max-width: 768px) {
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .gridPrensa {
+        grid-template-columns: 1fr;
+    }
+
+    .cardImage {
+        height: 250px;
+        /* Taller images on mobile often look better */
+    }
+}
