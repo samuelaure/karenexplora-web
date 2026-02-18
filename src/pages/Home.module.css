@@ -233,7 +233,8 @@
 
 @media (max-width: 900px) {
     .workshopGrid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 3rem;
         text-align: center;
     }

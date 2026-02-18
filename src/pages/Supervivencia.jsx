@@ -50,7 +50,7 @@ const Supervivencia = () => {
             </section>
 
             {/* Target Audience */}
-            <section className="section-light">
+            <section className="section-light" style={{ overflowX: 'hidden' }}>
                 <div className="container">
                     <div className="text-center mb-16">
                         <FadeIn>
@@ -86,7 +86,7 @@ const Supervivencia = () => {
             </section>
 
             {/* Syllabus - 5 Pillars */}
-            <section className="section-dark">
+            <section className="section-dark" style={{ overflowX: 'hidden' }}>
                 <div className="container">
                     <div className="text-center mb-16">
                         <FadeIn>
@@ -116,16 +116,16 @@ const Supervivencia = () => {
             </section>
 
             {/* Dynamics */}
-            <section className="section-light" style={{ backgroundColor: '#F0F4F0', padding: '10rem 0' }}>
-                <div className="container">
-                    <div className="text-center mb-12">
+            <section className="section-light" style={{ backgroundColor: '#F0F4F0', padding: '10rem 0', overflowX: 'hidden' }}>
+                <div className={`container ${styles.dynamicsMobileReorder}`}>
+                    <div className={`text-center mb-12 ${styles.dynamicsTitleWrapper}`}>
                         <FadeIn>
                             <h2 className={styles.sectionTitle} style={{ color: 'var(--primary-dark)' }}>Dinámica del Encuentro</h2>
                         </FadeIn>
                     </div>
 
                     <div className={styles.grid2} style={{ gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
-                        <FadeIn direction="left" className="flex-center">
+                        <FadeIn direction="left" className={`flex-center ${styles.dynamicsAgendaFade}`}>
                             <div className={styles.agendaBox}>
                                 <div className={styles.agendaItem}>
                                     <div className={styles.agendaTime} style={{ fontSize: '1.25rem' }}>45 min</div>
@@ -144,7 +144,7 @@ const Supervivencia = () => {
                             </div>
                         </FadeIn>
 
-                        <FadeIn direction="right" className="flex-center">
+                        <FadeIn direction="right" className={`flex-center ${styles.dynamicsCardFade}`}>
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -158,7 +158,6 @@ const Supervivencia = () => {
                                 boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
                                 borderTop: '5px solid var(--accent)'
                             }}>
-                                <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', color: '#888', fontWeight: 600 }}>Próxima Edición</span>
                                 <span style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--primary-dark)', lineHeight: 1 }}>21</span>
                                 <span style={{ fontSize: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', fontWeight: 800 }}>Marzo</span>
                                 <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
@@ -171,7 +170,7 @@ const Supervivencia = () => {
             </section>
 
             {/* Pricing Section */}
-            <section id="pricing" className="section-dark" style={{ padding: '10rem 0' }}>
+            <section id="pricing" className="section-dark" style={{ padding: '10rem 0', overflowX: 'hidden' }}>
                 <div className="container">
                     <div className="text-center mb-12">
                         <FadeIn>

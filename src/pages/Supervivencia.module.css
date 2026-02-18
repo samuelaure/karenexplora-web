@@ -193,6 +193,9 @@
 .benefitsGrid {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    /* Safety */
 }
 
 .benefitList {
@@ -200,12 +203,18 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem 6rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     position: relative;
+    width: 100%;
 }
 
 @media (min-width: 960px) {
+    .benefitList {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 6rem;
+    }
+
     .benefitList::after {
         content: '';
         position: absolute;
@@ -328,9 +337,22 @@
 
 .pricingGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 4rem;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .pricingGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .pricingGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .pricingCard {
@@ -445,13 +467,69 @@
 
 
     .grid2 {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
     }
 
     .hero {
         height: auto;
         padding: 8rem 0 4rem;
         min-height: auto;
+    }
+
+    .benefitList {
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .dynamicsMobileReorder {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dynamicsTitleWrapper {
+        order: 2;
+        margin-bottom: 2rem !important;
+    }
+
+    .dynamicsAgendaFade {
+        order: 3;
+    }
+
+    .dynamicsCardFade {
+        order: 1;
+        margin-bottom: 3rem;
+    }
+
+    .grid2 {
+        display: contents;
+    }
+
+    .curriculumItem {
+        padding: 2rem;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .curriculumNumber {
+        font-size: 2rem;
+    }
+
+    .curriculumList {
+        margin-top: 3rem;
+    }
+
+    .investmentIntro {
+        font-size: 1.05rem;
+    }
+
+    .agendaItem {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .agendaTime {
+        min-width: auto;
     }
 }
