@@ -18,6 +18,31 @@ const Tienda = () => {
                 </div>
             </header>
 
+            {/* Workshop Promo */}
+            <section className="section-dark" style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <div className="container">
+                    <div className={styles.grid2}>
+                        <FadeIn direction="right">
+                            <span style={{ color: 'var(--accent)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.9rem' }}>Evento en Vivo</span>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff', fontSize: '2rem' }}>Guía de Supervivencia</h2>
+                            <p className={styles.sectionText} style={{ marginBottom: '1.5rem', fontSize: '1rem', opacity: 0.8 }}>
+                                ¿Qué pasaría si dejáramos de vivir en modo supervivencia? Un taller de 2 horas con Karen Brewer.
+                            </p>
+                            <Button to="/supervivencia" variant="outline">Ver información</Button>
+                        </FadeIn>
+                        <FadeIn direction="left">
+                            <div style={{ padding: '2rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent)' }}>21</div>
+                                <div>
+                                    <div style={{ textTransform: 'uppercase', fontWeight: 600, fontSize: '0.9rem' }}>Marzo</div>
+                                    <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>Cupos Limitados</div>
+                                </div>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
             <section className="section-light">
                 <div className="container">
                     <div className={styles.grid2}>
