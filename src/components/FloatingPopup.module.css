@@ -36,8 +36,8 @@
 }
 
 .title {
-    font-family: var(--font-serif);
-    font-style: italic;
+    font-family: var(--font-sans);
+    font-weight: 700;
     font-size: 1.25rem;
     color: var(--accent);
     margin-bottom: 0.5rem;
