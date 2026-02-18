@@ -94,6 +94,7 @@ const Home = () => {
             </section>
 
             {/* Amenazas Title */}
+            {/* 
             <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('/images/minas-guri-deforestacion-venezuela.jpg')" }}>
                 <div className={styles.overlay}></div>
                 <div className={`container ${styles.relativeContent}`}>
@@ -103,13 +104,17 @@ const Home = () => {
                     </FadeIn>
                 </div>
             </section>
+            */}
 
             {/* Biodiversidad */}
-            <section id="biodiversidad" className="section-light">
+            <section id="biodiversidad" className="section-dark" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                 <div className="container">
                     <div className="text-center mb-16 mx-auto">
-                        <h2 className={styles.sectionTitle}>Conocer es proteger</h2>
-                        <p className={styles.heroText} style={{ color: 'var(--text-dark)', opacity: 0.8, maxWidth: '800px' }}>Involucrarse es el paso necesario para que el conocimiento trascienda.</p>
+                        <FadeIn>
+                            <span className={styles.cardTag} style={{ marginBottom: '1rem' }}>Nuestro Compromiso</span>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Conocer es proteger</h2>
+                            <p className={styles.heroText} style={{ opacity: 0.8, maxWidth: '800px' }}>Involucrarse es el paso necesario para que el conocimiento trascienda.</p>
+                        </FadeIn>
                     </div>
 
                     <div className={styles.grid3}>
@@ -142,6 +147,7 @@ const Home = () => {
             </section>
 
             {/* Exploracion Sections */}
+            {/* 
             <section id="exploracion" className="section-dark">
                 <div className="container space-y-32">
                     <div className="text-center mb-16">
@@ -151,7 +157,6 @@ const Home = () => {
                         </FadeIn>
                     </div>
 
-                    {/* Cronicas */}
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Crónicas de la Selva</h2>
@@ -162,7 +167,6 @@ const Home = () => {
                         </FadeIn>
                     </div>
 
-                    {/* Documentales */}
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left">
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Documentales</h2>
@@ -173,7 +177,6 @@ const Home = () => {
                         </FadeIn>
                     </div>
 
-                    {/* Descubrimientos */}
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Descubrimientos</h2>
@@ -184,7 +187,6 @@ const Home = () => {
                         </FadeIn>
                     </div>
 
-                    {/* Cesteria */}
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left">
                             <h2 className={styles.sectionTitle} style={{ color: '#fff' }}>Cestería Ye’Kwana</h2>
@@ -196,8 +198,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            */}
 
-            {/* Libros Section */}
+            {/* 
             <section id="libros" className="section-light">
                 <div className="container">
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Otros Libros de la Colección</h2>
@@ -209,6 +212,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            */}
         </div>
     );
 };
