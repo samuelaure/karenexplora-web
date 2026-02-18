@@ -12,7 +12,8 @@ const Supervivencia = () => {
                 background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                padding: '12rem 0'
+                paddingTop: 'calc(var(--navbar-height) + 8rem)',
+                paddingBottom: '10rem'
             }}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
@@ -40,7 +41,7 @@ const Supervivencia = () => {
                             </p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <p className={styles.sectionText} style={{ textAlign: 'left', margin: 0, opacity: 0.8, fontStyle: 'italic', borderLeft: '2px solid var(--accent)', paddingLeft: '1.5rem' }}>
+                            <p className={styles.quoteText}>
                                 "Olvidamos que nuestro cuerpo es nuestra herramienta principal y que el entorno, por hostil que parezca, tiene recursos si sabes dónde mirar."
                             </p>
                         </FadeIn>
@@ -56,22 +57,30 @@ const Supervivencia = () => {
                             <h2 className={styles.sectionTitle} style={{ color: 'var(--primary-dark)' }}>Este taller es para ti si...</h2>
                         </FadeIn>
                     </div>
-                    <div className={styles.pricingGrid} style={{ marginTop: 0 }}>
-                        {[
-                            "Sientes que vives siempre 'resolviendo'.",
-                            "Quieres más calma mental y claridad práctica.",
-                            "Tienes curiosidad por el cuerpo, la naturaleza y la autosuficiencia básica.",
-                            "Intuyes que la verdadera seguridad no viene de afuera.",
-                            "Quieres volver a confiar en tu criterio y en tu cuerpo.",
-                            "No necesitas experiencia previa ni conocimientos técnicos."
-                        ].map((item, i) => (
-                            <FadeIn key={i} delay={i * 0.1} className={styles.pillarCardLight}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <Check size={20} color="var(--primary)" />
-                                    <p style={{ margin: 0, fontWeight: 500 }}>{item}</p>
-                                </div>
-                            </FadeIn>
-                        ))}
+                    <div className={styles.benefitsGrid}>
+                        <FadeIn>
+                            <ul className={styles.benefitList}>
+                                {[
+                                    "Deja de vivir en modo 'resolviendo' y recupera el mando de tu atención.",
+                                    "Aprende a discernir lo urgente de lo importante bajo presión.",
+                                    "Vuelve a confiar en tu criterio y en la capacidad de tu propio cuerpo.",
+                                    "Entiende tu entorno no como algo hostil, sino como un mapa de recursos.",
+                                    "Descubre que la verdadera seguridad no viene de afuera, sino de lo que sabes hacer.",
+                                    "Disfruta de un taller diseñado para todos, sin necesidad de conocimientos técnicos."
+                                ].map((item, i) => (
+                                    <li key={i} className={styles.checkedItem}>
+                                        <Check size={20} className={styles.checklistIcon} />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </FadeIn>
+                    </div>
+
+                    <div className="text-center mt-16">
+                        <FadeIn delay={0.3}>
+                            <Button href="#pricing" variant="accent">Quiero dejar de sobrevivir</Button>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
@@ -86,61 +95,75 @@ const Supervivencia = () => {
                         </FadeIn>
                     </div>
 
-                    <div className={styles.pricingGrid}>
-                        <FadeIn className={styles.pillarCard} delay={0.1}>
-                            <h3 className={styles.pillarTitle}>1. Mentalidad de Explorador</h3>
-                            <p className={styles.pillarText}>Domina el método STOP para evitar el pánico y la Regla de los 3 para priorizar lo urgente sin vivir en alerta.</p>
-                        </FadeIn>
-                        <FadeIn className={styles.pillarCard} delay={0.2}>
-                            <h3 className={styles.pillarTitle}>2. Tu Cuerpo como Herramienta</h3>
-                            <p className={styles.pillarText}>Técnicas de "sueño táctico" (método militar) y rutinas de movimiento para que tu cuerpo no falle cuando lo necesites.</p>
-                        </FadeIn>
-                        <FadeIn className={styles.pillarCard} delay={0.3}>
-                            <h3 className={styles.pillarTitle}>3. Kit del Explorador Moderno</h3>
-                            <p className={styles.pillarText}>Qué llevar realmente en un bolso de emergencia y cómo usar herramientas básicas eficientemente (navaja, fuego, luz).</p>
-                        </FadeIn>
-                        <FadeIn className={styles.pillarCard} delay={0.4}>
-                            <h3 className={styles.pillarTitle}>4. Lectura del Entorno</h3>
-                            <p className={styles.pillarText}>Aprende a identificar recursos y gestionar situaciones de riesgo, en la calle o en la naturaleza.</p>
-                        </FadeIn>
-                        <FadeIn className={styles.pillarCard} delay={0.5}>
-                            <h3 className={styles.pillarTitle}>5. Hogar Resiliente</h3>
-                            <p className={styles.pillarText}>Preparativos para fallas de servicios, gestión de recursos y transformación de desechos en recursos.</p>
-                        </FadeIn>
+                    <div className={styles.curriculumList}>
+                        {[
+                            { title: "Mentalidad de Explorador", text: "Domina el método STOP para evitar el pánico y la Regla de los 3 para priorizar lo urgente sin vivir en alerta." },
+                            { title: "Tu Cuerpo como Herramienta", text: "Técnicas de 'sueño táctico' y rutinas de movimiento para que tu respuesta física sea eficiente." },
+                            { title: "Kit del Explorador Moderno", text: "Qué llevar realmente en tu mochila y cómo usar eficientemente navaja, fuego y luz." },
+                            { title: "Lectura del Entorno", text: "Identificación de recursos y gestión de riesgos, tanto en la ciudad como en la naturaleza." },
+                            { title: "Hogar Resiliente", text: "Preparativos para fallas de servicios públicos y transformación de desechos en recursos útiles." }
+                        ].map((item, i) => (
+                            <FadeIn key={i} className={styles.curriculumItem} delay={i * 0.1}>
+                                <div className={styles.curriculumNumber}>{String(i + 1).padStart(2, '0')}</div>
+                                <div className={styles.curriculumContent}>
+                                    <h3 className={styles.pillarTitle} style={{ fontSize: '1.75rem', marginTop: 0 }}>{item.title}</h3>
+                                    <p className={styles.pillarText} style={{ fontSize: '1.1rem', marginBottom: 0 }}>{item.text}</p>
+                                </div>
+                            </FadeIn>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* Dynamics */}
-            <section className="section-light" style={{ backgroundColor: '#F0F4F0' }}>
+            <section className="section-light" style={{ backgroundColor: '#F0F4F0', padding: '10rem 0' }}>
                 <div className="container">
-                    <div className={styles.grid2}>
-                        <FadeIn direction="left">
+                    <div className="text-center mb-12">
+                        <FadeIn>
                             <h2 className={styles.sectionTitle} style={{ color: 'var(--primary-dark)' }}>Dinámica del Encuentro</h2>
-                            <p className={styles.sectionText} style={{ color: 'var(--text-dark)', textAlign: 'left', margin: 0 }}>
-                                El taller es 100% online y en vivo.
-                                <br /><br />
-                                <strong>Contenido (~45 min):</strong> Una descarga de herramientas, técnicas y experiencias prácticas.
-                                <br /><br />
-                                <strong>Interacción (60+ min):</strong> Espacio abierto para conversar conmigo. Sin filtros, responderé preguntas para que el conocimiento se vuelva personal.
-                            </p>
                         </FadeIn>
-                        <FadeIn direction="right" style={{ display: 'flex', justifyContent: 'center' }}>
+                    </div>
+
+                    <div className={styles.grid2} style={{ gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
+                        <FadeIn direction="left" className="flex-center">
+                            <div className={styles.agendaBox}>
+                                <div className={styles.agendaItem}>
+                                    <div className={styles.agendaTime} style={{ fontSize: '1.25rem' }}>45 min</div>
+                                    <div className={styles.agendaContent}>
+                                        <h4 style={{ fontSize: '1.3rem' }}>Contenido</h4>
+                                        <p style={{ fontSize: '1.05rem' }}>Una descarga intensiva de herramientas, técnicas y experiencias prácticas.</p>
+                                    </div>
+                                </div>
+                                <div className={styles.agendaItem}>
+                                    <div className={styles.agendaTime} style={{ fontSize: '1.25rem' }}>60+ min</div>
+                                    <div className={styles.agendaContent}>
+                                        <h4 style={{ fontSize: '1.3rem' }}>Preguntas y respuestas</h4>
+                                        <p style={{ fontSize: '1.05rem' }}>Un espacio abierto para conversar conmigo. Responderé preguntas y profundizaré en los temas más interesantes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn direction="right" className="flex-center">
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',
                                 alignItems: 'center',
-                                padding: '3rem',
+                                padding: '2.5rem 2rem',
                                 background: 'white',
-                                borderRadius: '50%',
-                                width: '300px',
-                                height: '300px',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                                borderRadius: 'var(--radius-lg)',
+                                width: '100%',
+                                maxWidth: '280px',
+                                boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
+                                borderTop: '5px solid var(--accent)'
                             }}>
-                                <span style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--accent)', lineHeight: 1 }}>21</span>
-                                <span style={{ fontSize: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--primary-dark)' }}>Marzo</span>
-                                <span style={{ marginTop: '0.5rem', fontSize: '1rem', color: '#666' }}>Vía Google Meet</span>
+                                <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', color: '#888', fontWeight: 600 }}>Próxima Edición</span>
+                                <span style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--primary-dark)', lineHeight: 1 }}>21</span>
+                                <span style={{ fontSize: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', fontWeight: 800 }}>Marzo</span>
+                                <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                                    <span style={{ fontSize: '1rem', color: 'var(--primary-dark)', fontWeight: 600, display: 'block' }}>Vía Google Meet</span>
+                                </div>
                             </div>
                         </FadeIn>
                     </div>
@@ -148,14 +171,15 @@ const Supervivencia = () => {
             </section>
 
             {/* Pricing Section */}
-            <section id="pricing" className="section-dark">
+            <section id="pricing" className="section-dark" style={{ padding: '10rem 0' }}>
                 <div className="container">
-                    <div className="text-center mb-8">
+                    <div className="text-center mb-12">
                         <FadeIn>
                             <h2 className={styles.sectionTitle}>Elige tu inversión</h2>
-                            <p className={styles.sectionText}>
-                                El contenido es el mismo para todos. Si puedes aportar más, ayudas a que siga investigando.
+                            <p className={styles.investmentIntro}>
+                                He diseñado este espacio para que sea accesible y que el conocimiento llegue a quien lo necesite, y como no quiero que el dinero sea la pared que les impida aprender a potabilizar su agua o a calmar su mente en una crisis, he decidido ofrecer opciones para acceder.
                             </p>
+                            <p className={styles.investmentHint}>Todas las opciones tienen el mismo acceso, pero tú eliges con qué monto quieres sumarte a esta expedición:</p>
                         </FadeIn>
                     </div>
 
@@ -164,7 +188,7 @@ const Supervivencia = () => {
                         <FadeIn className={styles.pricingCard} delay={0.1}>
                             <h3 className={styles.pricingTitle}>Semilla</h3>
                             <div className={styles.pricingPrice}>$9</div>
-                            <p className={styles.pricingFeatures}>Acceso básico y completo al taller.</p>
+                            <p className={styles.pricingFeatures}>Acceso completo al taller.</p>
                             <Button href="https://buy.stripe.com/fZu3cw0yV7cg76MdkT7Zu02" target="_blank" variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
                         </FadeIn>
 
@@ -181,7 +205,7 @@ const Supervivencia = () => {
                         <FadeIn className={styles.pricingCard} delay={0.3}>
                             <h3 className={styles.pricingTitle}>Impulso</h3>
                             <div className={styles.pricingPrice}>$27</div>
-                            <p className={styles.pricingFeatures}>Contribución máxima al proyecto.</p>
+                            <p className={styles.pricingFeatures}>Contribución máxima para financiar mis investigaciones.</p>
                             <Button href="https://buy.stripe.com/eVq7sM0yV9ko2QwbcL7Zu04" target="_blank" variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
                         </FadeIn>
                     </div>
@@ -196,10 +220,12 @@ const Supervivencia = () => {
 
             {/* Final CTA */}
             <section className={styles.ctaSection}>
-                <div className="container" style={{ padding: '4rem 0' }}>
+                <div className={styles.ctaOverlay}></div>
+                <div className={styles.ctaContent}>
                     <FadeIn>
-                        <h2 style={{ fontFamily: 'Playfair Display', fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>No esperes una crisis para prepararte</h2>
-                        <Button href="#pricing" variant="dark">Asegurar mi lugar ahora</Button>
+                        <span className={styles.ctaSubtitle}>Tu camino a la autonomía</span>
+                        <h2 className={styles.ctaTitle}>No esperes una crisis para prepararte</h2>
+                        <Button href="#pricing" variant="accent">Asegurar mi lugar ahora</Button>
                     </FadeIn>
                 </div>
             </section>

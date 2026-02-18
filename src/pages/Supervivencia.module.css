@@ -1,7 +1,7 @@
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,17 +30,28 @@
 
 /* Use a better image if possible or a gradient if no image fits perfectly */
 .hero {
-    background-image: url('/images/sarisarinama-simas-landscape.jpg');
+    background-image: url('/images/sarisarinama-sinkholes-discovery.jpg');
 }
 
 .heroContent {
     position: relative;
     z-index: 2;
     padding: 0 2rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     color: var(--text);
-    /* Always light text in Hero */
+}
+
+.quoteText {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--accent);
+    border-left: 2px solid var(--accent);
+    padding-left: 2.5rem;
+    margin: 2rem 0;
+    opacity: 0.9;
 }
 
 .heroTitle {
@@ -103,10 +114,30 @@
     margin-right: auto;
 }
 
+.investmentIntro {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.85;
+}
+
+.investmentHint {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
 .grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
 }
 
@@ -157,6 +188,142 @@
 .pillarCardLight .pillarText {
     color: var(--text-dark);
     opacity: 0.8;
+}
+
+.benefitsGrid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefitList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem 6rem;
+    position: relative;
+}
+
+@media (min-width: 960px) {
+    .benefitList::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 0.5px);
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.checkedItem {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.checklistIcon {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.curriculumList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 6rem auto 0;
+}
+
+.curriculumItem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.curriculumNumber {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    opacity: 0.5;
+}
+
+.curriculumContent {
+    flex: 1;
+}
+
+.curriculumItem:hover .curriculumNumber {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+.curriculumItem:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.moduleIndicator {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.agendaBox {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.agendaItem {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.agendaItem:last-child {
+    border-bottom: none;
+}
+
+.agendaTime {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 100px;
+    font-size: 1.1rem;
+}
+
+.agendaContent h4 {
+    color: var(--primary-dark);
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+}
+
+.agendaContent p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .pricingGrid {
@@ -225,9 +392,53 @@
 }
 
 .ctaSection {
-    background: var(--primary-light);
-    color: var(--text);
+    position: relative;
+    padding: 120px 0;
+    background-image: url('/images/sarisarinama-sinkholes-discovery.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
+    overflow: hidden;
+}
+
+.ctaOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 8, 5, 0.7) 0%, rgba(5, 8, 5, 0.9) 100%);
+    z-index: 1;
+}
+
+.ctaContent {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.ctaTitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--text);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ctaSubtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 @media (max-width: 768px) {
