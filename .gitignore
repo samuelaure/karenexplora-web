@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 
+.env
 commit_msg.txt
 _trash/
 _legacy/
