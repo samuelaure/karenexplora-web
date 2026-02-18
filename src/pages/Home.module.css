@@ -12,7 +12,7 @@
     background-position: center;
     position: relative;
     text-align: center;
-    padding-top: 60px;
+    padding-top: calc(var(--navbar-height) + 40px);
     padding-bottom: 60px;
 }
 

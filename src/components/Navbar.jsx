@@ -1,14 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Youtube } from 'lucide-react';
 import { FaTiktok, FaPatreon } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ onHeightChange }) => {
+    const ref = useRef(null);
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+
+    useEffect(() => {
+        if (ref.current && onHeightChange) {
+            onHeightChange(ref.current.offsetHeight);
+        }
+    }, [scrolled, onHeightChange]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (ref.current && onHeightChange) {
+                onHeightChange(ref.current.offsetHeight);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [onHeightChange]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +48,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
+        <nav ref={ref} className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo}>
                     Karen<span>Explora</span>

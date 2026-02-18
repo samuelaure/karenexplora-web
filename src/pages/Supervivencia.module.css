@@ -10,6 +10,7 @@
     background-position: center;
     background-repeat: no-repeat;
     color: var(--text-dark);
+    padding-top: var(--navbar-height);
     /* Ensure dark text on light/image backgrounds unless explicitly inverted */
     overflow: hidden;
     background-image: url('/images/minas-guri-deforestacion-venezuela.jpg');

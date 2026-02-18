@@ -17,12 +17,16 @@ import TopBar from './components/TopBar';
 const App = () => {
   const location = useLocation();
   const [topBarHeight, setTopBarHeight] = useState(0);
+  const [navbarHeight, setNavbarHeight] = useState(90); // Default approx height to prevent jump
 
 
   return (
-    <div className="app" style={{ '--navbar-top': `${topBarHeight}px` }}>
+    <div className="app" style={{
+      '--navbar-top': `${topBarHeight}px`,
+      '--navbar-height': `${navbarHeight}px`
+    }}>
       <TopBar onHeightChange={setTopBarHeight} />
-      <Navbar />
+      <Navbar onHeightChange={setNavbarHeight} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
