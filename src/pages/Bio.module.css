@@ -27,11 +27,10 @@
 }
 
 .heroTitle {
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 4px;
     color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.1;
