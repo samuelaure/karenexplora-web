@@ -39,12 +39,12 @@ const Navbar = ({ onHeightChange }) => {
 
     const navLinks = [
         { name: 'Inicio', path: isHome ? '#' : '/' },
-        // Handle hash links. If on home, regular hash. If not, full path with hash.
         { name: 'Biodiversidad', path: isHome ? '#biodiversidad' : '/#biodiversidad' },
         // { name: 'Exploración', path: isHome ? '#exploracion' : '/#exploracion' },
         { name: 'Crónicas de la selva', path: '/cronicas' },
         { name: 'Charles', path: '/charles' },
         { name: 'Tienda', path: '/tienda' },
+        { name: 'Taller EN VIVO', path: '/supervivencia', highlighted: true },
     ];
 
     return (
@@ -60,7 +60,7 @@ const Navbar = ({ onHeightChange }) => {
                         <a
                             key={link.name}
                             href={link.path}
-                            className={styles.navLink}
+                            className={`${styles.navLink} ${link.highlighted ? styles.navLinkHighlighted : ''}`}
                         >
                             {link.name}
                         </a>
@@ -99,7 +99,7 @@ const Navbar = ({ onHeightChange }) => {
                         key={link.name}
                         href={link.path}
                         onClick={() => setIsOpen(false)}
-                        className={styles.mobileLink}
+                        className={`${styles.mobileLink} ${link.highlighted ? styles.mobileLinkHighlighted : ''}`}
                     >
                         {link.name}
                     </a>

@@ -102,6 +102,24 @@
     width: 100%;
 }
 
+.navLinkHighlighted {
+    background: var(--accent);
+    color: var(--bg) !important;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+}
+
+.navLinkHighlighted:hover {
+    background: var(--accent-glow);
+    color: var(--bg) !important;
+    transform: translateY(-1px);
+}
+
+.navLinkHighlighted::after {
+    display: none;
+}
+
 .social {
     display: flex;
     gap: 15px;
@@ -154,6 +172,11 @@
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: var(--text);
+}
+
+.mobileLinkHighlighted {
+    color: var(--accent) !important;
+    font-weight: 700;
 }
 
 @media (max-width: 900px) {
