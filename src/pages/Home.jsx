@@ -45,36 +45,23 @@ const Home = () => {
             </section>
 
             {/* Workshop Promo */}
-            <section className="section-dark" style={{
-                background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                padding: '12rem 0',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                <div className="container">
-                    <div className={styles.grid2}>
+            <section id="workshop" className={styles.workshopPromo} style={{ backgroundImage: "url('/images/sarisarinama-sinkholes-discovery.jpg')" }}>
+                <div className={styles.promoOverlay}></div>
+                <div className={`container ${styles.relative}`}>
+                    <div className={styles.workshopGrid}>
                         <FadeIn direction="right">
-                            <span style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, display: 'block', marginBottom: '1rem' }}>Nuevo Taller Online</span>
-                            <h2 className={styles.sectionTitle} style={{ color: '#fff', marginBottom: '2rem', textShadow: '0 2px 10px rgba(0,0,0,0.3)', fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}>Guía de Supervivencia para el día a día</h2>
-                            <p className={styles.heroText} style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                                Taller online de 2 horas <strong>EN VIVO</strong> con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
+                            <span className={styles.promoTag}>Nuevo Taller Online</span>
+                            <h2 className={styles.sectionTitle} style={{ color: '#fff', marginBottom: '2rem', fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}>Guía de Supervivencia para el día a día</h2>
+                            <p className={styles.promoText}>
+                                Taller online de 2 horas <strong>EN VIVO</strong> con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis y autonomía física.
                             </p>
                             <Button to="/supervivencia" variant="accent">Ver detalles y Reservar</Button>
                         </FadeIn>
                         <FadeIn direction="left" className="flex-center">
-                            <div style={{
-                                background: 'rgba(255,255,255,0.1)',
-                                backdropFilter: 'blur(10px)',
-                                padding: '2rem',
-                                borderRadius: 'var(--radius-lg)',
-                                border: '1px solid rgba(255,255,255,0.2)',
-                                textAlign: 'center'
-                            }}>
-                                <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--accent)' }}>21</div>
-                                <div style={{ fontSize: '1.2rem', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Marzo</div>
-                                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>Vía Google Meet</div>
+                            <div className={styles.workshopCard}>
+                                <span className={styles.day}>21</span>
+                                <span className={styles.month}>Marzo</span>
+                                <div className={styles.location}>Vía Google Meet</div>
                             </div>
                         </FadeIn>
                     </div>

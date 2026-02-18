@@ -204,6 +204,135 @@
     transform: scale(1.03);
 }
 
+/* --- Workshop Promo --- */
+.workshopPromo {
+    position: relative;
+    padding: 12rem 4rem;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.workshopGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 8rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 1100px) {
+    .workshopGrid {
+        gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .workshopGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+}
+
+.promoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(5, 8, 5, 0.92), rgba(5, 8, 5, 0.99));
+    z-index: 1;
+}
+
+.workshopCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 3.5rem 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.workshopCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.workshopCard .day {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+}
+
+.workshopCard .month {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.workshopCard .location {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.promoTag {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.relative {
+    position: relative;
+    z-index: 2;
+}
+
+.promoText {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+@media (max-width: 900px) {
+    .workshopPromo {
+        padding: 8rem 1.5rem;
+        text-align: center;
+    }
+
+    .promoText {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .workshopCard {
+        margin: 0 auto;
+    }
+}
+
 /* --- Amenazas Section --- */
 .amenazasSection {
     position: relative;
