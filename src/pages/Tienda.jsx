@@ -22,7 +22,7 @@ const Tienda = () => {
                         {/* Workshop Card */}
                         <FadeIn delay={0.1} className={styles.productCard}>
                             <div className={styles.productImageWrapper}>
-                                <img src="/images/sarisarinama-simas-landscape.jpg" alt="Taller de Supervivencia" className={styles.productImage} />
+                                <img src="/images/sarisarinama-sinkholes-discovery.jpg" alt="Taller de Supervivencia" className={styles.productImage} />
                                 <div className={styles.productTag}>Nuevo</div>
                             </div>
                             <div className={styles.productContent}>
