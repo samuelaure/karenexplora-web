@@ -36,7 +36,8 @@
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-serif);
+    font-style: italic;
     font-size: 1.25rem;
     color: var(--accent);
     margin-bottom: 0.5rem;
@@ -45,6 +46,7 @@
 }
 
 .text {
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.8);

@@ -53,9 +53,9 @@ const FloatingPopup = () => {
                         <button onClick={handleClose} className={styles.closeBtn} aria-label="Cerrar">
                             <X size={20} />
                         </button>
-                        <h3 className={styles.title}>Nuevo Taller en Vivo</h3>
+                        <h3 className={styles.title}>Nuevo Taller EN VIVO</h3>
                         <p className={styles.text}>
-                            Taller online de 2 horas con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
+                            Taller online de 2 horas <strong>EN VIVO</strong> con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
                         </p>
                         <Link to="/supervivencia" className={styles.cta} onClick={handleClose}>
                             Ver detalles <ArrowRight size={16} style={{ marginLeft: '0.5rem' }} />

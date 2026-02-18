@@ -5,7 +5,13 @@ import { CheckCircle } from 'lucide-react';
 
 const SupervivenciaGracias = () => {
     return (
-        <div className={styles.hero} style={{ height: '80vh', minHeight: '500px', backgroundImage: 'radial-gradient(circle at 50% 50%, #2F3E2B 0%, #050805 100%)' }}>
+        <div className={styles.hero} style={{
+            height: '80vh',
+            minHeight: '500px',
+            background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+        }}>
             <div className={styles.heroOverlay}></div>
             <div className={styles.heroContent} style={{ maxWidth: '600px' }}>
                 <FadeIn>

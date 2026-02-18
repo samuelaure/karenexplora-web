@@ -48,7 +48,7 @@ const TopBar = ({ onHeightChange }) => {
         <div className={styles.topBar} ref={ref}>
             <div className={styles.topBarContainer}>
                 <div className={styles.topBarContent}>
-                    <span>Nuevo Taller Online: Guía de Supervivencia - 21 de Marzo. </span>
+                    <span>Nuevo Taller Online: Guía de Supervivencia <strong>EN VIVO</strong> - 21 de Marzo. </span>
                     <Link to="/supervivencia" className={styles.topBarLink}>Reserva tu cupo aquí</Link>
                 </div>
                 <button onClick={handleClose} className={styles.closeButton} aria-label="Cerrar aviso">

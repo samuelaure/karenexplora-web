@@ -8,13 +8,18 @@ const Supervivencia = () => {
     return (
         <div className="page-wrapper">
             {/* Hero Section */}
-            <header className={styles.hero} style={{ backgroundImage: "url('/images/sarisarinama-simas-landscape.jpg')" }}>
+            <header className={styles.hero} style={{
+                background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                padding: '12rem 0'
+            }}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <FadeIn delay={0.2}>
-                        <div className={styles.heroDate}>21 de Marzo | En Vivo</div>
+                        <div className={styles.heroDate}>21 de Marzo | EN VIVO</div>
                         <h1 className={styles.heroTitle}>Guía de Supervivencia para el día a día</h1>
-                        <p className={styles.sectionText}>Recupera lo humano: criterio, calma y autonomía en un mundo caótico.</p>
+                        <p className={styles.sectionText}>Taller online de 2 horas <strong>EN VIVO</strong> con Karen para recuperar lo humano: criterio, calma y autonomía en un mundo caótico.</p>
                         <Button href="#pricing" variant="accent">Reservar Mi Cupo</Button>
                     </FadeIn>
                 </div>

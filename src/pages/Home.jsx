@@ -59,7 +59,7 @@ const Home = () => {
                             <span style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, display: 'block', marginBottom: '1rem' }}>Nuevo Taller Online</span>
                             <h2 className={styles.sectionTitle} style={{ color: '#fff', marginBottom: '2rem', textShadow: '0 2px 10px rgba(0,0,0,0.3)', fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}>Guía de Supervivencia para el día a día</h2>
                             <p className={styles.heroText} style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                                Taller online de 2 horas con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
+                                Taller online de 2 horas <strong>EN VIVO</strong> con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
                             </p>
                             <Button to="/supervivencia" variant="accent">Ver detalles y Reservar</Button>
                         </FadeIn>
