@@ -21,6 +21,9 @@
   --accent-pop: #8FAA7B;
   /* Fresh Green */
 
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Outfit', sans-serif;
+
   --text: #F7F7F7;
   /* White/Off-white for dark bg */
   --text-muted: rgba(247, 247, 247, 0.7);
