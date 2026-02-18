@@ -1,13 +1,33 @@
 .nav {
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 1000;
     padding: 20px 0;
     background: linear-gradient(to bottom, rgba(5, 8, 5, 0.36), rgba(5, 8, 5, 0.54));
     transition: var(--transition);
     border-bottom: 1px solid transparent;
+    /* Ensure it works as overlay too? */
+    /* Sticky takes space. We want it to overlay the Hero? */
+    /* Original was fixed, so hero was underneath (at top 0). */
+    /* If sticky, Hero starts AFTER Navbar. That breaks the design (Hero image needs to be behind nav). */
+
+    /* Revert to Fixed. */
+    position: fixed;
+    /* We need to create a layout where TopBar pushes Navbar down ONLY if TopBar is present? */
+    /* Or we mount TopBar fixed at top, and Navbar at top: <size>. */
+    /* Javascript solution is cleanest for "TopBar height varies". */
+    /* But CSS Custom Property is better. */
+
+    /* New Strategy: */
+    /* App.jsx renders TopBar. */
+    /* TopBar sets a CSS variable --top-bar-height? */
+
+    /* Simplest Visual: TopBar sits ON TOP of everything (z-index 1002). */
+    /* Navbar sits at `top: var(--top-bar-height, 0px)`. */
+
+    /* Let's modify Navbar to accept a style prop or class? No, CSS variable. */
+    top: var(--navbar-top, 0px);
 }
 
 .navScrolled {

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,12 +12,16 @@ import Bio from './pages/Bio';
 import Supervivencia from './pages/Supervivencia';
 import SupervivenciaGracias from './pages/SupervivenciaGracias';
 import FloatingPopup from './components/FloatingPopup';
+import TopBar from './components/TopBar';
 
 const App = () => {
   const location = useLocation();
+  const [topBarHeight, setTopBarHeight] = useState(0);
+
 
   return (
-    <div className="app">
+    <div className="app" style={{ '--navbar-top': `${topBarHeight}px` }}>
+      <TopBar onHeightChange={setTopBarHeight} />
       <Navbar />
       <main>
         <Routes>
