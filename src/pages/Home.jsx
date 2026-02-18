@@ -52,7 +52,7 @@ const Home = () => {
                             <span style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, display: 'block', marginBottom: '1rem' }}>Nuevo Taller Online</span>
                             <h2 className={styles.sectionTitle} style={{ color: '#fff', marginBottom: '1.5rem' }}>Guía de Supervivencia para el día a día</h2>
                             <p className={styles.heroText} style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                                Recupera tres herramientas fundamentales del explorador: criterio, calma y autonomía. Un taller en vivo para aprender a habitar el mundo moderno con menos fricción.
+                                Taller online de 2 horas con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
                             </p>
                             <Button to="/supervivencia" variant="accent">Ver detalles y Reservar</Button>
                         </FadeIn>
@@ -67,7 +67,7 @@ const Home = () => {
                             }}>
                                 <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--accent)' }}>21</div>
                                 <div style={{ fontSize: '1.2rem', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Marzo</div>
-                                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>Vía Zoom</div>
+                                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>Vía Google Meet</div>
                             </div>
                         </FadeIn>
                     </div>
@@ -87,7 +87,7 @@ const Home = () => {
                             <p className={styles.textLg} style={{ color: 'var(--text-dark)' }}>
                                 Más que un libro, un testimonio de la Venezuela inexplorada. Descubre este material invaluable digitalizado por primera vez.
                             </p>
-                            <Button to="/tienda" variant="accent" style={{ color: 'white' }}>Saber más y Comprar</Button>
+                            <Button to="/libro" variant="accent" style={{ color: 'white' }}>Saber más y Comprar</Button>
                         </FadeIn>
                     </div>
                 </div>

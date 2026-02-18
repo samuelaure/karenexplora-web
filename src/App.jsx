@@ -6,6 +6,7 @@ import Cronicas from './pages/Cronicas';
 import Charles from './pages/Charles';
 
 import Tienda from './pages/Tienda';
+import Libro from './pages/Libro';
 import Bio from './pages/Bio';
 import Supervivencia from './pages/Supervivencia';
 import SupervivenciaGracias from './pages/SupervivenciaGracias';
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/cronicas" element={<Cronicas />} />
           <Route path="/charles" element={<Charles />} />
           <Route path="/tienda" element={<Tienda />} />
+          <Route path="/libro" element={<Libro />} />
           <Route path="/bio" element={<Bio />} />
           <Route path="/supervivencia" element={<Supervivencia />} />
           <Route path="/supervivencia/gracias" element={<SupervivenciaGracias />} />
