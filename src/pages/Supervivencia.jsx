@@ -79,7 +79,7 @@ const Supervivencia = () => {
 
                     <div className="text-center mt-16">
                         <FadeIn delay={0.3}>
-                            <Button href="#pricing" variant="accent">Quiero dejar de sobrevivir</Button>
+                            <Button href="#pricing" variant="accent">Quiero ver a Karen EN VIVO</Button>
                         </FadeIn>
                     </div>
                 </div>
