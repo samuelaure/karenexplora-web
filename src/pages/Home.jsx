@@ -45,6 +45,7 @@ const Home = () => {
             </section>
 
             {/* Workshop Promo */}
+            {/*
             <section id="workshop" className={styles.workshopPromo} style={{ backgroundImage: "url('/images/sarisarinama-sinkholes-discovery.jpg')" }}>
                 <div className={styles.promoOverlay}></div>
                 <div className={`container ${styles.relative}`}>
@@ -67,6 +68,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             {/* Featured Book */}
             <section className="section-light">

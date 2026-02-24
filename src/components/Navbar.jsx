@@ -44,7 +44,7 @@ const Navbar = ({ onHeightChange }) => {
         { name: 'Crónicas de la selva', path: '/cronicas' },
         { name: 'Charles', path: '/charles' },
         { name: 'Tienda', path: '/tienda' },
-        { name: 'Taller EN VIVO', path: '/supervivencia', highlighted: true },
+        // { name: 'Taller EN VIVO', path: '/supervivencia', highlighted: true },
     ];
 
     return (

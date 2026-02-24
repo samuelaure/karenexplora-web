@@ -20,6 +20,7 @@ const Tienda = () => {
                 <div className="container">
                     <div className={styles.grid2}>
                         {/* Workshop Card */}
+                        {/*
                         <FadeIn delay={0.1} className={styles.productCard}>
                             <div className={styles.productImageWrapper}>
                                 <img src="/images/sarisarinama-sinkholes-discovery.jpg" alt="Taller de Supervivencia" className={styles.productImage} />
@@ -37,6 +38,7 @@ const Tienda = () => {
                                 <Button to="/supervivencia" variant="accent" style={{ width: '100%' }}>Ver Detalles</Button>
                             </div>
                         </FadeIn>
+                        */}
 
                         {/* Book Card */}
                         <FadeIn delay={0.2} className={styles.productCard}>
