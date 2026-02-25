@@ -66,7 +66,7 @@ const Cronicas = () => {
                             {
                                 title: "Hato Las Caretas",
                                 description: "Pasión por la naturaleza Karen Brewer, exploradora y naturalista",
-                                link: "http://hatolascaretas.com/pasion-por-la-naturaleza-karen-brewer-exploradora-y-naturalista/",
+                                link: "https://hatolascaretas.com/pasion-por-la-naturaleza-karen-brewer-exploradora-y-naturalista/",
                                 image: "/images/prensa-hato-las-caretas.png",
                                 buttonText: "Lee más"
                             },
