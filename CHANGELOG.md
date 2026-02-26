@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/samuelaure/karenexplora-web/compare/v0.2.9...v0.2.10) (2026-02-26)
+
+
+### Features
+
+* **security:** use Header always set for better scanner compatibility ([8fc62fe](https://github.com/samuelaure/karenexplora-web/commit/8fc62fe59796ef435413669e1dc2c85f2ab055a0))
+
 ### [0.2.9](https://github.com/samuelaure/karenexplora-web/compare/v0.2.8...v0.2.9) (2026-02-26)
 
 
