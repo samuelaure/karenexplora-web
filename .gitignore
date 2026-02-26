@@ -28,3 +28,4 @@ _legacy/
 *.njsproj
 *.sln
 *.sw?
+.ftp-deploy-sync-state.json
