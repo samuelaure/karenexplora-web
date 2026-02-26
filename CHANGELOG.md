@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/samuelaure/karenexplora-web/compare/v0.2.7...v0.2.8) (2026-02-26)
+
+
+### Features
+
+* **security:** implement CSP and security hardening headers ([98e2c99](https://github.com/samuelaure/karenexplora-web/commit/98e2c99e9f214784114b89e7371b1efe044a68a0))
+
 ### [0.2.6](https://github.com/samuelaure/karenexplora-web/compare/v0.2.5...v0.2.6) (2026-02-25)
 
 ### [0.2.5](https://github.com/samuelaure/karenexplora-web/compare/v0.2.4...v0.2.5) (2026-02-25)
