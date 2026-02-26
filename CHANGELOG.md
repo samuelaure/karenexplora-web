@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/samuelaure/karenexplora-web/compare/v0.2.8...v0.2.9) (2026-02-26)
+
+
+### Bug Fixes
+
+* **deploy:** remove dangerous-clean-slate to resolve FTP timeout ([6e46e5d](https://github.com/samuelaure/karenexplora-web/commit/6e46e5d381f090395848434c1903582509f6fd3d))
+
 ### [0.2.8](https://github.com/samuelaure/karenexplora-web/compare/v0.2.7...v0.2.8) (2026-02-26)
 
 
