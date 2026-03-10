@@ -13,6 +13,7 @@ import Supervivencia from './pages/Supervivencia';
 import SupervivenciaGracias from './pages/SupervivenciaGracias';
 import FloatingPopup from './components/FloatingPopup';
 import TopBar from './components/TopBar';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/bio" element={<Bio />} />
           <Route path="/supervivencia" element={<Supervivencia />} />
           <Route path="/supervivencia/gracias" element={<SupervivenciaGracias />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <FloatingPopup key={location.key} />
