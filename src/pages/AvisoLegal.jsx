@@ -23,10 +23,10 @@ const AvisoLegal = () => {
                             <div className={styles.sectionContent}>
                                 <p>En cumplimiento de la legislación aplicable, se informa que el sitio web es gestionado por:</p>
                                 <ul className={styles.list}>
-                                    <li><strong>Nombre/Razón Social:</strong> Karen Explora</li>
-                                    <li><strong>Correo Electrónico:</strong> contacto@karenexplora.com</li>
-                                    <li><strong>Dirección:</strong> [Tu Dirección Fiscal - *MANUAL REQ*: Completa este dato o déjalo como contacto digital si no es empresa registrada aún en España/UE]</li>
-                                    <li><strong>CIF/NIF:</strong> [Tu Identificación Fiscal]</li>
+                                    <li><strong>Titular:</strong> Samuel Aure</li>
+                                    <li><strong>Contacto Principal:</strong> contacto@karenexplora.com</li>
+                                    <li><strong>Actividad:</strong> Exploración, educación ambiental y divulgación de biodiversidad.</li>
+                                    <li><strong>Operaciones:</strong> Gestión digital internacional.</li>
                                 </ul>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ const AvisoLegal = () => {
                         <div className={styles.section}>
                             <h2 className={styles.sectionTitle}>3. Responsabilidad</h2>
                             <div className={styles.sectionContent}>
-                                <p>Karen Explora no se hace responsable de las opiniones vertidas en canales externos o por colaboradores ajenos. Asimismo, no se garantiza la disponibilidad técnica absoluta de la plataforma debido a factores externos del hosting u otros servicios digitales.</p>
+                                <p>karenexplora.com no se hace responsable de las opiniones vertidas en canales externos o por colaboradores ajenos. Asimismo, no se garantiza la disponibilidad técnica absoluta de la plataforma debido a factores externos del hosting u otros servicios digitales.</p>
                             </div>
                         </div>
                     </FadeIn>
