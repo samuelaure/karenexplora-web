@@ -11,11 +11,13 @@ import Libro from './pages/Libro';
 import Bio from './pages/Bio';
 import Supervivencia from './pages/Supervivencia';
 import SupervivenciaGracias from './pages/SupervivenciaGracias';
+import Contacto from './pages/Contacto';
+import Privacidad from './pages/Privacidad';
+import AvisoLegal from './pages/AvisoLegal';
+import TerminosVenta from './pages/TerminosVenta';
 import FloatingPopup from './components/FloatingPopup';
 import TopBar from './components/TopBar';
 import NotFound from './pages/NotFound';
-import Contacto from './pages/Contacto';
-import Privacidad from './pages/Privacidad';
 
 const App = () => {
   const location = useLocation();
@@ -42,6 +44,8 @@ const App = () => {
           <Route path="/supervivencia/gracias" element={<SupervivenciaGracias />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/privacidad" element={<Privacidad />} />
+          <Route path="/aviso-legal" element={<AvisoLegal />} />
+          <Route path="/terminos-venta" element={<TerminosVenta />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -25,7 +25,9 @@ const Footer = () => {
                             <li><Link to="/bio" className={styles.link}>Bio</Link></li>
                             <li><Link to="/tienda" className={styles.link}>Tienda</Link></li>
                             <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
-                            <li><Link to="/privacidad" className={styles.link}>Políticas</Link></li>
+                            <li><Link to="/privacidad" className={styles.link}>Privacidad</Link></li>
+                            <li><Link to="/aviso-legal" className={styles.link}>Aviso Legal</Link></li>
+                            <li><Link to="/terminos-venta" className={styles.link}>Términos</Link></li>
                         </ul>
                     </div>
 
