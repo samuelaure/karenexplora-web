@@ -8,9 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "start": "node server.js",
     "verify": "npm run lint && npm run build"
   },
   "dependencies": {
+    "express": "^5.2.1",
     "framer-motion": "^12.29.2",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
