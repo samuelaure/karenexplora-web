@@ -24,6 +24,8 @@ const Footer = () => {
                             <li><Link to="/charles" className={styles.link}>Charles</Link></li>
                             <li><Link to="/bio" className={styles.link}>Bio</Link></li>
                             <li><Link to="/tienda" className={styles.link}>Tienda</Link></li>
+                            <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
+                            <li><Link to="/privacidad" className={styles.link}>Políticas</Link></li>
                         </ul>
                     </div>
 

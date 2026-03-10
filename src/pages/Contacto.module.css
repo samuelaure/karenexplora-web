@@ -1,0 +1,89 @@
+.container {
+    padding-top: calc(var(--navbar-height) + 100px);
+    padding-bottom: 100px;
+    min-height: 80vh;
+}
+
+.title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.emailCard {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.emailCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.emailIcon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.emailLabel {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.emailValue {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.emailValue:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
