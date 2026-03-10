@@ -1,10 +1,11 @@
-import React from 'react';
 import styles from './Privacidad.module.css'; // Consistent styling
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const TerminostVenta = () => {
     return (
         <div className="page-wrapper">
+            <SEO title="Términos de Venta" description="Condiciones de compra y entrega de productos digitales en karenexplora.com" />
             <section className={styles.container}>
                 <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <FadeIn direction="up">

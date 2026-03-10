@@ -2,10 +2,15 @@ import { Check } from 'lucide-react';
 import styles from './Tienda.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 
 const Tienda = () => {
     return (
         <div className="page-wrapper">
+            <SEO
+                title="Tienda"
+                description="Explora nuestra selección de libros digitales y talleres exclusivos sobre naturaleza y supervivencia."
+            />
             <header className={styles.hero} style={{ height: '60vh', minHeight: '400px' }}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>

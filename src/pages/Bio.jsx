@@ -1,9 +1,14 @@
 import styles from './Bio.module.css';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const Bio = () => {
     return (
         <div>
+            <SEO
+                title="Bio"
+                description="Conoce a Karen Brewer-Carías, exploradora, naturalista y divulgadora dedicada a la protección de la biodiversidad venezolana."
+            />
             {/* Short Hero */}
             <header className={styles.hero}>
                 <div className={styles.heroOverlay}></div>

@@ -4,6 +4,7 @@ import styles from './Home.module.css';
 import { ArrowRight } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const location = useLocation();
@@ -19,6 +20,7 @@ const Home = () => {
 
     return (
         <div>
+            <SEO />
             {/* Hero Section */}
             <header className={styles.hero} style={{ backgroundImage: "url('/images/auyantepuy-tepui-venezuela.jpg')" }}>
                 <div className={styles.heroOverlay}></div>

@@ -1,10 +1,15 @@
 import Slider from '../components/Slider';
 import FadeIn from '../components/FadeIn';
 import styles from './Cronicas.module.css';
+import SEO from '../components/SEO';
 
 const Cronicas = () => {
     return (
         <div>
+            <SEO
+                title="Crónicas de la Selva"
+                description="Historias, anécdotas y expediciones reales desde el corazón de la selva venezolana y más allá."
+            />
             <header className={styles.hero}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>

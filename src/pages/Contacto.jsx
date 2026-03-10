@@ -1,11 +1,16 @@
 import React from 'react';
-import { Mail, Instagram, Youtube, MapPin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import styles from './Contacto.module.css';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const Contacto = () => {
     return (
         <div className="page-wrapper">
+            <SEO
+                title="Contacto"
+                description="¿Tienes alguna duda o propuesta de colaboración? Ponte en contacto con el equipo de Karen Explora."
+            />
             <section className={styles.container}>
                 <div className="container">
                     <FadeIn direction="up">

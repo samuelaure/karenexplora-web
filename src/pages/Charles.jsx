@@ -1,5 +1,6 @@
 import FadeIn from '../components/FadeIn';
 import styles from './Charles.module.css';
+import SEO from '../components/SEO';
 
 const videos = [
     { "title": "Gracias y feliz cumpleaños Charles Brewer-Carías!", "id": "o75Cm2cnmTI" },
@@ -31,6 +32,10 @@ const videos = [
 const Charles = () => {
     return (
         <div>
+            <SEO
+                title="Charles Brewer-Carías"
+                description="El legado del explorador Charles Brewer-Carías: digitalizando décadas de expediciones, hallazgos científicos y bitácoras de la selva venezolana."
+            />
             <header className={styles.hero}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>

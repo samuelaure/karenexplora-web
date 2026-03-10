@@ -1,10 +1,11 @@
-import React from 'react';
 import styles from './Privacidad.module.css';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const Privacidad = () => {
     return (
         <div className="page-wrapper">
+            <SEO title="Política de Privacidad" description="Política de privacidad y protección de datos conforme al RGPD e internacionales." />
             <section className={styles.container}>
                 <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <FadeIn direction="up">

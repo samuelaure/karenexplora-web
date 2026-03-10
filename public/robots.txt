@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /supervivencia-gracias
+Disallow: /supervivencia/gracias
 
-Sitemap: https://www.karenexplora.com/sitemap.xml
+Sitemap: https://karenexplora.com/sitemap.xml

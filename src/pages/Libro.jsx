@@ -2,10 +2,15 @@ import { Check } from 'lucide-react';
 import styles from './Libro.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 
 const Libro = () => {
     return (
         <div>
+            <SEO
+                title="Libro: Antropología dental en los indios soto"
+                description="Descarga la obra digital de Charles Brewer-Carías sobre la etnia Soto y la vivencia pura en la Guayana venezolana."
+            />
             <header className={styles.hero}>
                 <div className={styles.heroOverlay}></div>
                 <div className={`container ${styles.heroContent}`}>

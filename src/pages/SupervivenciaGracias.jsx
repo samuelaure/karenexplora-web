@@ -2,6 +2,7 @@ import styles from './Supervivencia.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
 import { CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const SupervivenciaGracias = () => {
     return (
@@ -13,6 +14,7 @@ const SupervivenciaGracias = () => {
             paddingTop: 'calc(var(--navbar-height) + 4rem)',
             paddingBottom: '4rem'
         }}>
+            <SEO title="¡Gracias!" noindex={true} />
             <div className={styles.heroOverlay}></div>
             <div className={styles.heroContent} style={{ maxWidth: '600px' }}>
                 <FadeIn>

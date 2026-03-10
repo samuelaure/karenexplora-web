@@ -2,11 +2,16 @@ import styles from './Supervivencia.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
 import { ArrowRight, Check } from 'lucide-react';
+import SEO from '../components/SEO';
 
 
 const Supervivencia = () => {
     return (
         <div className="page-wrapper">
+            <SEO
+                title="Taller: Guía de Supervivencia"
+                description="Taller online EN VIVO con Karen Brewer-Carías para recuperar criterio, calma y autonomía en un mundo caótico."
+            />
             {/* Hero Section */}
             <header className={styles.hero} style={{
                 background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',

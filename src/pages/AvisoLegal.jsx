@@ -1,10 +1,11 @@
-import React from 'react';
 import styles from './Privacidad.module.css'; // Consistent styling with Privacy
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/SEO';
 
 const AvisoLegal = () => {
     return (
         <div className="page-wrapper">
+            <SEO title="Aviso Legal" description="Términos legales y condiciones de uso del sitio web karenexplora.com" />
             <section className={styles.container}>
                 <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <FadeIn direction="up">
