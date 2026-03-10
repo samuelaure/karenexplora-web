@@ -1,11 +1,19 @@
+import { useState } from 'react';
 import { Check } from 'lucide-react';
 import styles from './Libro.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
+import PaymentModal from '../components/PaymentModal';
 
 const Libro = () => {
-    return (
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedPlan, setSelectedPlan] = useState({ name: '', price: 0, stripeLink: '' });
+
+    const openPayment = (name, price, stripeLink) => {
+        setSelectedPlan({ name, price, stripeLink });
+        setIsModalOpen(true);
+    }; return (
         <div>
             <SEO
                 title="Libro: Antropología dental en los indios soto"
@@ -98,12 +106,19 @@ const Libro = () => {
                         <div className={styles.purchaseCard}>
                             <p className={styles.supportLabel}>Apoya el legado</p>
                             <div className={styles.priceTag}>$19.99</div>
-                            <Button href="https://buy.stripe.com/6oUdRagxT68cdva2Gf7Zu01" target="_blank" rel="noreferrer" variant="accent" className={styles.purchaseButton}>Adquirir Edición Digital</Button>
+                            <Button onClick={() => openPayment('Edición Digital: Antropología Dental', 19.99, 'https://buy.stripe.com/6oUdRagxT68cdva2Gf7Zu01')} variant="accent" className={styles.purchaseButton}>Adquirir Edición Digital</Button>
                             <p className={styles.secureText}>Pago seguro procesado por Stripe</p>
                         </div>
                     </FadeIn>
                 </div>
             </section>
+            <PaymentModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                planName={selectedPlan.name}
+                planPrice={selectedPlan.price}
+                stripeLink={selectedPlan.stripeLink}
+            />
         </div>
     );
 };

@@ -2,128 +2,16 @@ import { useState } from 'react';
 import styles from './Supervivencia.module.css';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
-import { ArrowRight, Check, X, CreditCard, Landmark, Globe } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import SEO from '../components/SEO';
-
-const PaymentModal = ({ isOpen, onClose, planName, planPrice }) => {
-    const [activeTab, setActiveTab] = useState('paypal'); // paypal, vzla, otros
-
-    if (!isOpen) return null;
-
-    const whatsappLink = `https://wa.me/34656328436?text=Hola,%20me%20gustaría%20inscribirme%20en%20el%20plan%20${planName}%20($${planPrice}).%20Prefiero%20pagar%20con%20tarjeta%20o%20transferencia%20europea.`;
-
-    const handleOverlayClick = (e) => {
-        if (e.target === e.currentTarget) onClose();
-    };
-
-    return (
-        <div className={styles.modalOverlay} onClick={handleOverlayClick}>
-            <div className={styles.modalContent}>
-                <button className={styles.modalClose} onClick={onClose}>
-                    <X size={24} />
-                </button>
-
-                <div className={styles.modalHeader}>
-                    <h2 className={styles.modalTitle}>Inscripción al Taller</h2>
-                    <div className={styles.modalPlanSummary}>
-                        Plan {planName} — ${planPrice}
-                    </div>
-                </div>
-
-                <div className={styles.modalTabs}>
-                    <button
-                        className={`${styles.tabBtn} ${activeTab === 'paypal' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('paypal')}
-                    >
-                        <Globe size={16} /> PayPal
-                    </button>
-                    <button
-                        className={`${styles.tabBtn} ${activeTab === 'vzla' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('vzla')}
-                    >
-                        <Landmark size={16} /> Venezuela
-                    </button>
-                    <button
-                        className={`${styles.tabBtn} ${activeTab === 'otros' ? styles.active : ''}`}
-                        onClick={() => setActiveTab('otros')}
-                    >
-                        <CreditCard size={16} /> Otros
-                    </button>
-                </div>
-
-                <div className={styles.tabContent}>
-                    {activeTab === 'paypal' && (
-                        <div className="animate-fadeIn">
-                            <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Enviar pago a (Email)</span>
-                                <span className={styles.detailValue}>contacto@karenexplora.com</span>
-                            </div>
-                            <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Monto a enviar</span>
-                                <span className={styles.detailValue}>${planPrice} USD</span>
-                            </div>
-                            <div className={styles.modalInstructions}>
-                                <span className={styles.instructionTitle}>Pasos a seguir:</span>
-                                <p className={styles.instructionText}>
-                                    1. Envía el monto exacto vía PayPal.<br />
-                                    2. Envía el comprobante por WhatsApp o al email de contacto.<br />
-                                    3. Recibirás tu enlace de acceso en menos de 24h.
-                                </p>
-                            </div>
-                        </div>
-                    )}
-
-                    {activeTab === 'vzla' && (
-                        <div className="animate-fadeIn">
-                            <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Banco</span>
-                                <span className={styles.detailValue}>[Tu Banco en Vzla]</span>
-                            </div>
-                            <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Datos de Pago Móvil / Transferencia</span>
-                                <span className={styles.detailValue}>
-                                    Cédula: [Tu Cédula]<br />
-                                    Teléfono: [Tu Teléfono]<br />
-                                    Cuenta: [Tu Número de Cuenta]
-                                </span>
-                            </div>
-                            <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Monto aproximado</span>
-                                <span className={styles.detailValue}>Equivalente a ${planPrice} USD (Tasa del día)</span>
-                            </div>
-                            <div className={styles.modalInstructions}>
-                                <span className={styles.instructionTitle}>Confirmación:</span>
-                                <p className={styles.instructionText}>
-                                    Envía la captura de la transferencia por WhatsApp para validar tu cupo.
-                                </p>
-                            </div>
-                        </div>
-                    )}
-
-                    {activeTab === 'otros' && (
-                        <div className="animate-fadeIn">
-                            <p className={styles.sectionText} style={{ color: 'var(--text)', fontSize: '1rem', textAlign: 'center' }}>
-                                Si prefieres pagar con <strong>Tarjeta de Crédito / Débito</strong> o vía <strong>transferencia bancaria en Europa (IBAN)</strong>, pulsa el botón para solicitar el enlace directo.
-                            </p>
-                            <div className={styles.whatsappAction}>
-                                <Button href={whatsappLink} target="_blank" variant="accent" full>
-                                    Solicitar enlace por WhatsApp
-                                </Button>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-};
+import PaymentModal from '../components/PaymentModal';
 
 const Supervivencia = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedPlan, setSelectedPlan] = useState({ name: '', price: 0 });
+    const [selectedPlan, setSelectedPlan] = useState({ name: '', price: 0, stripeLink: '' });
 
-    const openPayment = (name, price) => {
-        setSelectedPlan({ name, price });
+    const openPayment = (name, price, stripeLink) => {
+        setSelectedPlan({ name, price, stripeLink });
         setIsModalOpen(true);
     };
 
@@ -314,7 +202,7 @@ const Supervivencia = () => {
                             <h3 className={styles.pricingTitle}>Semilla</h3>
                             <div className={styles.pricingPrice}>$9</div>
                             <p className={styles.pricingFeatures}>Acceso completo al taller.</p>
-                            <Button onClick={() => openPayment('Semilla', 9)} variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
+                            <Button onClick={() => openPayment('Semilla', 9, 'https://buy.stripe.com/fZu3cw0yV7cg76MdkT7Zu02')} variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
                         </FadeIn>
 
                         {/* Support */}
@@ -323,7 +211,7 @@ const Supervivencia = () => {
                             <h3 className={styles.pricingTitle}>Apoyo</h3>
                             <div className={styles.pricingPrice}>$18</div>
                             <p className={styles.pricingFeatures}>Impulsa la creación de contenido.</p>
-                            <Button onClick={() => openPayment('Apoyo', 18)} variant="accent" style={{ marginTop: 'auto' }}>Inscribirme</Button>
+                            <Button onClick={() => openPayment('Apoyo', 18, 'https://buy.stripe.com/7sY5kE5Tf7cg9eUbcL7Zu03')} variant="accent" style={{ marginTop: 'auto' }}>Inscribirme</Button>
                         </FadeIn>
 
                         {/* Impulse */}
@@ -331,7 +219,7 @@ const Supervivencia = () => {
                             <h3 className={styles.pricingTitle}>Impulso</h3>
                             <div className={styles.pricingPrice}>$27</div>
                             <p className={styles.pricingFeatures}>Contribución máxima para financiar mis investigaciones.</p>
-                            <Button onClick={() => openPayment('Impulso', 27)} variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
+                            <Button onClick={() => openPayment('Impulso', 27, 'https://buy.stripe.com/eVq7sM0yV9ko2QwbcL7Zu04')} variant="outline" style={{ marginTop: 'auto', borderColor: 'rgba(255,255,255,0.2)' }}>Inscribirme</Button>
                         </FadeIn>
                     </div>
 
@@ -360,6 +248,7 @@ const Supervivencia = () => {
                 onClose={() => setIsModalOpen(false)}
                 planName={selectedPlan.name}
                 planPrice={selectedPlan.price}
+                stripeLink={selectedPlan.stripeLink}
             />
         </div>
     );
