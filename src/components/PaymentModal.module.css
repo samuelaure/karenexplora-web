@@ -145,6 +145,22 @@
     line-height: 1.4;
 }
 
+.paymentSectionHeader {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+}
+
 .detailPrime {
     display: block;
     font-size: 2.25rem;

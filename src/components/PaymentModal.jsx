@@ -37,7 +37,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
 
     const getReportMessage = () => {
         if (activeTab === 'vzla') {
-            return `¡Hola! He realizado el pago de Bs. ${vesAmount} (equivalente a $${planPrice} USD, tasa ${displayRate}) por el plan "${planName}". Adjunto el comprobante.`;
+            return `¡Hola! He realizado el pago de Bs. ${vesAmount} (equivalente a $${planPrice} USD, tasa ${displayRate}) por el plan "${planName}" vía VENEZUELA. Adjunto el comprobante.`;
         }
         return `¡Hola! He realizado el pago de $${planPrice} por el plan "${planName}" vía ${activeTab.toUpperCase()}. Adjunto el comprobante.`;
     };
@@ -89,7 +89,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                         className={`${styles.tabBtn} ${activeTab === 'vzla' ? styles.active : ''}`}
                         onClick={() => setActiveTab('vzla')}
                     >
-                        <Landmark size={18} /> Vzla
+                        <Landmark size={18} /> Venezuela
                     </button>
                     <button
                         className={`${styles.tabBtn} ${activeTab === 'card' ? styles.active : ''}`}
@@ -148,18 +148,47 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                     Tasa aplicada: 1 USD = {displayRate} Bs.
                                 </span>
                             </div>
+
+                            <div className={styles.paymentSectionHeader}>Pago Móvil</div>
                             <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Banco</span>
-                                <span className={styles.detailValue}>[Tu Banco en Vzla]</span>
+                                <div className={styles.detailItem}>
+                                    <span className={styles.detailLabel}>Banco</span>
+                                    <span className={styles.detailValue}>BBVA</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Teléfono</span>
+                                    <span className={styles.detailValue}>0414 112 10 40</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Cédula / RIF</span>
+                                    <span className={styles.detailValue}>V-20.304.625</span>
+                                </div>
                             </div>
+
+                            <div className={styles.paymentSectionHeader}>Transferencia Bancaria</div>
                             <div className={styles.paymentDetailRow}>
-                                <span className={styles.detailLabel}>Datos de Pago Móvil / Transferencia</span>
-                                <span className={styles.detailValue}>
-                                    Cédula: [Tu Cédula]<br />
-                                    Teléfono: [Tu Teléfono]<br />
-                                    Cuenta: [Tu Número de Cuenta]
-                                </span>
+                                <div className={styles.detailItem}>
+                                    <span className={styles.detailLabel}>Banco</span>
+                                    <span className={styles.detailValue}>BBVA Provincial</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Tipo de Cuenta</span>
+                                    <span className={styles.detailValue}>Corriente</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Número de Cuenta</span>
+                                    <span className={styles.detailValue} style={{ fontSize: '1rem' }}>0108-0034-01-0100433716</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Titular</span>
+                                    <span className={styles.detailValue}>JOHN BREWER CARIAS</span>
+                                </div>
+                                <div className={styles.detailItem} style={{ marginTop: '1rem' }}>
+                                    <span className={styles.detailLabel}>Cédula</span>
+                                    <span className={styles.detailValue}>V-20.304.625</span>
+                                </div>
                             </div>
+
                             <div className={styles.modalInstructions}>
                                 <span className={styles.instructionTitle}>Tasa Referencial:</span>
                                 <p className={styles.instructionText}>
