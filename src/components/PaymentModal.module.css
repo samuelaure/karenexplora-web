@@ -145,6 +145,22 @@
     line-height: 1.4;
 }
 
+.detailPrime {
+    display: block;
+    font-size: 2.25rem;
+    color: #768f55;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.detailSecondary {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
 .modalInstructions {
     margin-top: 2rem;
     padding: 1.5rem;
