@@ -130,6 +130,10 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                 <span className={styles.detailLabel}>Usuario Pay</span>
                                 <span className={styles.detailValue}>@SamuelAure</span>
                             </div>
+                            <div className={styles.paymentDetailRow}>
+                                <span className={styles.detailLabel}>Monto a enviar</span>
+                                <span className={styles.detailValue}>${planPrice} USDT / USD</span>
+                            </div>
                             <ReportNote />
                         </div>
                     )}
@@ -159,7 +163,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                             <div className={styles.modalInstructions}>
                                 <span className={styles.instructionTitle}>Tasa Referencial:</span>
                                 <p className={styles.instructionText}>
-                                    Estamos usando la tasa de <strong>Binance P2P</strong> (redondeada a favor del explorador) para que el proceso sea más transparente.
+                                    Estamos usando la tasa de <strong>Binance P2P</strong> (simplificada a favor del explorador) para que el proceso sea más limpio.
                                 </p>
                             </div>
                             <ReportNote />
@@ -168,11 +172,15 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
 
                     {activeTab === 'card' && (
                         <div className="animate-fadeIn">
+                            <div className={styles.paymentDetailRow}>
+                                <span className={styles.detailLabel}>Monto de la orden</span>
+                                <span className={styles.detailValue}>${planPrice} USD</span>
+                            </div>
                             <p style={{ color: 'rgba(255,255,255,0.8)', textAlign: 'center', marginBottom: '2rem' }}>
                                 Pulsa el botón para ir a la plataforma segura de Stripe y realizar el pago con tu tarjeta.
                             </p>
                             <div style={{ textAlign: 'center' }}>
-                                <Button href={stripeLink} target="_blank" variant="accent" full>
+                                <Button href={stripeLink} target="_blank" variant="outline" full style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>
                                     Pagar con Tarjeta (Stripe)
                                 </Button>
                             </div>
@@ -182,6 +190,10 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
 
                     {activeTab === 'iban' && (
                         <div className="animate-fadeIn">
+                            <div className={styles.paymentDetailRow}>
+                                <span className={styles.detailLabel}>Monto a transferir</span>
+                                <span className={styles.detailValue}>${planPrice} USD / EUR</span>
+                            </div>
                             <div className={styles.paymentDetailRow}>
                                 <span className={styles.detailLabel}>IBAN (Bélgica)</span>
                                 <span className={styles.detailValue}>BE32 9675 7698 8702</span>
