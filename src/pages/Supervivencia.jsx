@@ -32,7 +32,7 @@ const Supervivencia = () => {
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <FadeIn delay={0.2}>
-                        <div className={styles.heroDate}>21 de Marzo | EN VIVO</div>
+                        <div className={styles.heroDate}>21 de Marzo | 12:00 PM VZLA | EN VIVO</div>
                         <h1 className={styles.heroTitle}>Guía de Supervivencia para el día a día</h1>
                         <p className={styles.sectionText}>Taller online de 2 horas <strong>EN VIVO</strong> con Karen para recuperar lo humano: criterio, calma y autonomía en un mundo caótico.</p>
                         <Button href="#pricing" variant="accent">Reservar Mi Cupo</Button>
@@ -155,6 +155,27 @@ const Supervivencia = () => {
                                         <p style={{ fontSize: '1.05rem' }}>Un espacio abierto para conversar conmigo. Responderé preguntas y profundizaré en los temas más interesantes</p>
                                     </div>
                                 </div>
+                                <div className={styles.agendaItem}>
+                                    <div className={styles.agendaTime} style={{ fontSize: '1.25rem' }}>Horarios</div>
+                                    <div className={styles.agendaContent}>
+                                        <div style={{ 
+                                            display: 'grid', 
+                                            gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', 
+                                            gap: '1rem', 
+                                            marginTop: '0.5rem',
+                                            padding: '1rem',
+                                            background: 'rgba(0,0,0,0.03)',
+                                            borderRadius: '12px',
+                                            border: '1px dashed rgba(0,0,0,0.1)'
+                                        }}>
+                                            <div style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--accent)' }}>10:00 AM</strong> | México</div>
+                                            <div style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--accent)' }}>11:00 AM</strong> | Col, Perú</div>
+                                            <div style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--accent)' }}>12:00 PM</strong> | Vzla, Miami</div>
+                                            <div style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--accent)' }}>01:00 PM</strong> | Arg, Chile</div>
+                                            <div style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--accent)' }}>05:00 PM</strong> | España</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </FadeIn>
 
@@ -175,7 +196,8 @@ const Supervivencia = () => {
                                 <span style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--primary-dark)', lineHeight: 1 }}>21</span>
                                 <span style={{ fontSize: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', fontWeight: 800 }}>Marzo</span>
                                 <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-                                    <span style={{ fontSize: '1rem', color: 'var(--primary-dark)', fontWeight: 600, display: 'block' }}>Vía Google Meet</span>
+                                    <span style={{ fontSize: '1.25rem', color: 'var(--primary-dark)', fontWeight: 800, display: 'block', marginBottom: '0.25rem' }}>12:00 PM VZLA</span>
+                                    <span style={{ fontSize: '0.9rem', color: 'var(--primary-dark)', fontWeight: 500, display: 'block' }}>Vía Google Meet</span>
                                 </div>
                             </div>
                         </FadeIn>

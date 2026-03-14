@@ -37,7 +37,7 @@ const Tienda = () => {
                                     Taller online de 2 horas con Karen para transformar el caos en calma. Aprende mentalidad de explorador, gestión de crisis, recursos del hogar y autonomía física para habitar mejor el mundo actual.
                                 </p>
                                 <div className={styles.productMeta}>
-                                    <span>21 de Marzo Via Google Meet</span>
+                                    <span>21 de Marzo | 12:00 PM VZLA | Google Meet</span>
                                 </div>
                                 <Button to="/supervivencia" variant="accent" style={{ width: '100%' }}>Ver Detalles</Button>
                             </div>
