@@ -6,6 +6,7 @@ import { X, ArrowRight } from 'lucide-react';
 import styles from './FloatingPopup.module.css';
 
 const FloatingPopup = () => {
+    const isWorkshopActive = false;
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation();
 
@@ -37,7 +38,7 @@ const FloatingPopup = () => {
         localStorage.setItem('supervivenciaPopupDismissed', Date.now().toString());
     };
 
-    if (location.pathname.startsWith('/supervivencia')) return null;
+    if (!isWorkshopActive || location.pathname.startsWith('/supervivencia')) return null;
 
     return (
         <AnimatePresence>

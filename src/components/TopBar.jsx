@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './TopBar.module.css';
 
 const TopBar = ({ onHeightChange }) => {
+    const isWorkshopActive = false;
     const [isVisible, setIsVisible] = useState(() => {
         return !sessionStorage.getItem('topBarHidden');
     });
@@ -42,7 +43,7 @@ const TopBar = ({ onHeightChange }) => {
         sessionStorage.setItem('topBarHidden', 'true');
     };
 
-    if (!isVisible || shouldHide) return null;
+    if (!isVisible || shouldHide || !isWorkshopActive) return null;
 
     return (
         <div className={styles.topBar} ref={ref}>
