@@ -42,7 +42,7 @@ const Navbar = ({ onHeightChange }) => {
         { name: 'Biodiversidad', path: isHome ? '#biodiversidad' : '/#biodiversidad' },
         // { name: 'Exploración', path: isHome ? '#exploracion' : '/#exploracion' },
         { name: 'Crónicas de la selva', path: '/cronicas' },
-        { name: 'Charles', path: '/charles' },
+        { name: 'Familia', path: '/familia' },
         { name: 'Tienda', path: '/tienda' },
         // { name: 'Taller EN VIVO', path: '/supervivencia', highlighted: true },
     ];

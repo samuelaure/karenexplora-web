@@ -1,5 +1,5 @@
 import FadeIn from '../components/FadeIn';
-import styles from './Charles.module.css';
+import styles from './Familia.module.css';
 import SEO from '../components/SEO';
 
 const videos = [
@@ -29,7 +29,7 @@ const videos = [
     { "title": "Charles Brewer Carias haciendo barras", "id": "U7fjpZWFl-4" }
 ];
 
-const Charles = () => {
+const Familia = () => {
     return (
         <div>
             <SEO
@@ -86,4 +86,4 @@ const Charles = () => {
     );
 };
 
-export default Charles;
+export default Familia;

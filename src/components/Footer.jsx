@@ -21,7 +21,7 @@ const Footer = () => {
                             <li><a href="/#biodiversidad" className={styles.link}>Biodiversidad</a></li>
                             <li><a href="/#exploracion" className={styles.link}>Exploración</a></li>
                             <li><Link to="/cronicas" className={styles.link}>Crónicas</Link></li>
-                            <li><Link to="/charles" className={styles.link}>Charles</Link></li>
+                            <li><Link to="/familia" className={styles.link}>Familia</Link></li>
                             <li><Link to="/bio" className={styles.link}>Bio</Link></li>
                             <li><Link to="/tienda" className={styles.link}>Tienda</Link></li>
                             <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
