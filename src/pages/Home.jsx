@@ -28,22 +28,6 @@ const Home = () => {
                     ↓ Descargar PDF
                 </a>
             </div>
-
-            <div className={styles.viewerWrapper}>
-                <object
-                    data={`${PDF_URL}#toolbar=1&navpanes=0&scrollbar=1&view=FitH`}
-                    type="application/pdf"
-                    className={styles.viewer}
-                    aria-label="Mapas de relevamiento - Terremoto Venezuela 2026"
-                >
-                    <div className={styles.fallback}>
-                        <p>El documento no pudo cargarse en el visor.</p>
-                        <a href={PDF_URL} download={PDF_FILENAME} className={styles.downloadBtn}>
-                            ↓ Descargar PDF directamente
-                        </a>
-                    </div>
-                </object>
-            </div>
         </div>
     );
 };
