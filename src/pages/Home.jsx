@@ -12,36 +12,38 @@ const Home = () => {
                 description="Mapas de relevamiento de la destrucción tras el Terremoto en Venezuela 2026, Estado La Guaira."
             />
 
-            <div className={styles.header}>
+            <section className={styles.section}>
+                <span className={styles.label}>Recursos verificados</span>
+                <h2 className={styles.title}>Directorio de ayuda — Terremoto Venezuela</h2>
+                <p className={styles.desc}>Directorio de páginas web y archivos verificados para ayudar a las víctimas del terremoto en Venezuela. Toda la información es revisada antes de publicarse.</p>
                 <a
                     href="https://directorio-sismo.netlify.app/"
                     target="_blank"
                     rel="noreferrer"
-                    className={styles.directoryCard}
+                    className={styles.btn}
                 >
-                    <span className={styles.directoryLabel}>Recursos verificados</span>
-                    <span className={styles.directoryTitle}>Directorio de ayuda — Terremoto Venezuela</span>
-                    <span className={styles.directoryDesc}>Directorio de páginas web y archivos verificados para ayudar a las víctimas del terremoto en Venezuela. Toda la información es revisada antes de publicarse.</span>
-                    <span className={styles.directoryLink}>directorio-sismo.netlify.app →</span>
+                    Ir al directorio →
                 </a>
+            </section>
 
-                <div className={styles.divider} />
+            <div className={styles.divider} />
 
-                <h1 className={styles.title}>
+            <section className={styles.section}>
+                <span className={styles.label}>Edo. La Guaira</span>
+                <h2 className={styles.title}>
                     Mapas de relevamiento de la destrucción<br />
-                    <span>tras el Terremoto en Venezuela 2026</span>
-                </h1>
-                <p className={styles.subtitle}>Edo. La Guaira</p>
+                    <span className={styles.accent}>tras el Terremoto en Venezuela 2026</span>
+                </h2>
                 <a
                     href={PDF_URL}
                     download={PDF_FILENAME}
-                    className={styles.downloadBtn}
+                    className={styles.btn}
                     target="_blank"
                     rel="noreferrer"
                 >
                     ↓ Descargar PDF
                 </a>
-            </div>
+            </section>
         </div>
     );
 };
