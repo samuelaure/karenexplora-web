@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import HomeOriginal from './pages/HomeOriginal';
 import Cronicas from './pages/Cronicas';
 import Familia from './pages/Familia';
 
@@ -35,6 +36,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/inicio" element={<HomeOriginal />} />
           <Route path="/cronicas" element={<Cronicas />} />
           <Route path="/familia" element={<Familia />} />
           <Route path="/tienda" element={<Tienda />} />
