@@ -30,12 +30,19 @@ const Home = () => {
             </div>
 
             <div className={styles.viewerWrapper}>
-                <iframe
-                    src={`${PDF_URL}#toolbar=1&navpanes=0&scrollbar=1&view=FitH`}
+                <object
+                    data={`${PDF_URL}#toolbar=1&navpanes=0&scrollbar=1&view=FitH`}
+                    type="application/pdf"
                     className={styles.viewer}
-                    title="Mapas de relevamiento - Terremoto Venezuela 2026"
-                    loading="lazy"
-                />
+                    aria-label="Mapas de relevamiento - Terremoto Venezuela 2026"
+                >
+                    <div className={styles.fallback}>
+                        <p>El documento no pudo cargarse en el visor.</p>
+                        <a href={PDF_URL} download={PDF_FILENAME} className={styles.downloadBtn}>
+                            ↓ Descargar PDF directamente
+                        </a>
+                    </div>
+                </object>
             </div>
         </div>
     );
