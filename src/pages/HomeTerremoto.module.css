@@ -1,7 +1,7 @@
 .wrapper {
     min-height: calc(100vh - var(--navbar-height, 90px) - var(--navbar-top, 0px));
-    background: #111;
-    color: #f0f0f0;
+    background: #f2f2f2;
+    color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +20,8 @@
 .divider {
     width: 100%;
     max-width: 640px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    height: 2px;
+    background: #ccc;
     flex-shrink: 0;
 }
 
@@ -30,7 +30,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: #ffc107;
+    color: #b06000;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -38,18 +38,18 @@
 .title {
     font-size: clamp(1.3rem, 3vw, 1.9rem);
     font-weight: 800;
-    color: #ffffff;
+    color: #111;
     margin: 0 0 1rem;
     line-height: 1.4;
 }
 
 .accent {
-    color: #ffc107;
+    color: #b06000;
 }
 
 .desc {
     font-size: 0.97rem;
-    color: #d0d0d0;
+    color: #333;
     line-height: 1.75;
     margin: 0 0 1.75rem;
 }
@@ -57,8 +57,8 @@
 .btn {
     display: inline-block;
     padding: 0.8rem 2.2rem;
-    background: #ffc107;
-    color: #000;
+    background: #111;
+    color: #fff;
     font-weight: 800;
     font-size: 1rem;
     border-radius: 4px;
@@ -68,7 +68,7 @@
 }
 
 .btn:hover {
-    background: #ffd54f;
+    background: #333;
 }
 
 /* ── Guide ── */
@@ -98,25 +98,25 @@
 .guideBlock {
     margin-top: 2.5rem;
     padding-top: 2.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 2px solid #ccc;
 }
 
 .guideH3 {
     font-size: 1.1rem;
     font-weight: 800;
-    color: #ffc107;
+    color: #b06000;
     margin: 0 0 1rem;
 }
 
 .guideP {
-    font-size: 0.92rem;
-    color: #cccccc;
+    font-size: 0.93rem;
+    color: #333;
     line-height: 1.8;
     margin: 0.5rem 0;
 }
 
 .guideP strong {
-    color: #ffffff;
+    color: #111;
     font-weight: 700;
 }
 
@@ -129,13 +129,13 @@
 }
 
 .guideList li {
-    font-size: 0.92rem;
-    color: #cccccc;
+    font-size: 0.93rem;
+    color: #333;
     line-height: 1.75;
 }
 
 .guideList li strong {
-    color: #ffffff;
+    color: #111;
     font-weight: 700;
 }
 
@@ -149,8 +149,8 @@
 }
 
 .zoneCard {
-    background: #1c1c1c;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #fff;
+    border: 2px solid #ccc;
     border-radius: 8px;
     padding: 1.25rem 1.5rem;
 }
@@ -158,13 +158,13 @@
 .zoneTitle {
     font-size: 0.95rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #111;
     margin: 0 0 0.75rem;
 }
 
 .zoneTitle span {
     font-weight: 400;
-    color: #aaaaaa;
+    color: #666;
     font-size: 0.82rem;
     display: block;
     margin-top: 0.15rem;
@@ -174,7 +174,7 @@
 
 .table {
     margin-top: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -182,7 +182,7 @@
 .tableRow {
     display: grid;
     grid-template-columns: 200px 1fr;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #ccc;
 }
 
 .tableRow:last-child {
@@ -190,14 +190,14 @@
 }
 
 .tableHeader {
-    background: #1c1c1c;
+    background: #e0e0e0;
 }
 
 .tableHeader .tableCell {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #aaaaaa;
+    color: #555;
     font-weight: 700;
 }
 
@@ -206,14 +206,14 @@
     padding: 0.9rem 1.1rem;
     font-size: 0.9rem;
     line-height: 1.7;
-    color: #cccccc;
+    color: #333;
 }
 
 .tableCellHead {
     font-weight: 700;
-    color: #ffffff;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    background: #181818;
+    color: #111;
+    border-right: 1px solid #ccc;
+    background: #ececec;
 }
 
 /* ── Steps ── */
@@ -236,8 +236,8 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background: #ffc107;
-    color: #000;
+    background: #111;
+    color: #fff;
     font-weight: 900;
     font-size: 0.9rem;
     display: flex;
@@ -249,7 +249,7 @@
 .stepTitle {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #111;
     margin: 0 0 0.4rem;
 }
 
@@ -263,8 +263,8 @@
 }
 
 .insumoItem {
-    background: #1c1c1c;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #fff;
+    border: 2px solid #ccc;
     border-radius: 8px;
     padding: 1.25rem;
 }
@@ -272,7 +272,7 @@
 .insumoTitle {
     font-size: 0.9rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #111;
     margin: 0 0 0.6rem;
 }
 
@@ -293,7 +293,7 @@
 
     .tableCellHead {
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid #ccc;
         padding-bottom: 0.4rem;
     }
 }
