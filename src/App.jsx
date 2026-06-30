@@ -51,7 +51,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <FloatingPopup key={location.key} />
+      {/* <FloatingPopup key={location.key} /> */}
       <Footer />
     </div>
   );
