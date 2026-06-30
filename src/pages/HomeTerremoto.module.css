@@ -48,3 +48,60 @@
 .downloadBtn:hover {
     background: #f0b800;
 }
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 2.5rem auto;
+}
+
+.directoryCard {
+    display: block;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 1.5rem 1.75rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: left;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.directoryCard:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.directoryLabel {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #e0a800;
+    margin-bottom: 0.5rem;
+}
+
+.directoryTitle {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.directoryDesc {
+    display: block;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.directoryLink {
+    display: block;
+    font-size: 0.82rem;
+    color: #e0a800;
+    opacity: 0.8;
+}

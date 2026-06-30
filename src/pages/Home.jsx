@@ -13,6 +13,20 @@ const Home = () => {
             />
 
             <div className={styles.header}>
+                <a
+                    href="https://directorio-sismo.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.directoryCard}
+                >
+                    <span className={styles.directoryLabel}>Recursos verificados</span>
+                    <span className={styles.directoryTitle}>Directorio de ayuda — Terremoto Venezuela</span>
+                    <span className={styles.directoryDesc}>Directorio de páginas web y archivos verificados para ayudar a las víctimas del terremoto en Venezuela. Toda la información es revisada antes de publicarse.</span>
+                    <span className={styles.directoryLink}>directorio-sismo.netlify.app →</span>
+                </a>
+
+                <div className={styles.divider} />
+
                 <h1 className={styles.title}>
                     Mapas de relevamiento de la destrucción<br />
                     <span>tras el Terremoto en Venezuela 2026</span>
