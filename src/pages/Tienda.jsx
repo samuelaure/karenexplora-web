@@ -53,7 +53,7 @@ const Tienda = () => {
                             </div>
                             <div className={styles.productContent}>
                                 <span className={styles.productCategory}>Edición Especial</span>
-                                <h2 className={styles.productTitle}>Antropología Dental en los Indios Soto</h2>
+                                <h2 className={styles.productTitle}>Antropología Dental en los Indígenas Soto</h2>
                                 <p className={styles.productDescription}>
                                     Una obra fundamental de Charles Brewer-Carías sobre la vivencia pura en las tierras más antiguas.
                                 </p>

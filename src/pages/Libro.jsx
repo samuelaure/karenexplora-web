@@ -16,7 +16,7 @@ const Libro = () => {
     }; return (
         <div>
             <SEO
-                title="Libro: Antropología dental en los indios soto"
+                title="Libro: Antropología dental en los indígenas soto"
                 description="Descarga la obra digital de Charles Brewer-Carías sobre la etnia Soto y la vivencia pura en la Guayana venezolana."
             />
             <header className={styles.hero}>
@@ -24,7 +24,7 @@ const Libro = () => {
                 <div className={`container ${styles.heroContent}`}>
                     <FadeIn>
                         <span className={styles.heroSubtitle}>Edición Digital</span>
-                        <h1 className={styles.heroTitle}>Antropología dental en los indios soto...</h1>
+                        <h1 className={styles.heroTitle}>Antropología dental en los indígenas soto...</h1>
                         <p className={styles.heroDescription}>Adéntrate en la obra donde Charles Brewer-Carías documenta la vivencia pura en las tierras más antiguas del planeta.</p>
                         <Button href="#purchase" variant="accent">Descargar Libro Digital (PDF)</Button>
                     </FadeIn>
@@ -75,7 +75,7 @@ const Libro = () => {
                 <div className="container">
                     <div className={`${styles.grid2} ${styles.reverse}`}>
                         <FadeIn direction="left" className="content-flex">
-                            <h2 className={styles.sectionTitle}>🦷 El Enigma de los Indios Soto</h2>
+                            <h2 className={styles.sectionTitle}>🦷 El Enigma de los Indígenas Soto</h2>
                             <p className={`${styles.sectionText} ${styles.enigmaText}`}>Charles Brewer-Carías analiza la dentición de los Soto no solo como médico, sino como un observador de la pureza humana antes del impacto de la modernidad.</p>
                         </FadeIn>
                         <FadeIn direction="right">

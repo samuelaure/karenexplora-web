@@ -81,7 +81,7 @@ const Home = () => {
                         </FadeIn>
                         <FadeIn direction="left">
                             <span className={styles.cardTag}>Obra Destacada</span>
-                            <h2 className={styles.sectionTitle}>Antropología dental en los indios soto...</h2>
+                            <h2 className={styles.sectionTitle}>Antropología dental en los indígenas soto...</h2>
                             <p className={styles.textLg} style={{ color: 'var(--text-dark)' }}>
                                 Más que un libro, un testimonio de la Venezuela inexplorada. Descubre este material invaluable digitalizado por primera vez.
                             </p>
