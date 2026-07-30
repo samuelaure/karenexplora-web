@@ -55,7 +55,13 @@ const Footer = () => {
 
                 <div className={styles.bottom}>
                     <p>&copy; 2026 Karen Explora. Todos los derechos reservados.</p>
-                    <p><a href="https://www.samuelaure.com" target="_blank" rel="noreferrer" className={styles.designerLink}>naŭ</a></p>
+                    <div className={styles.bottomRight}>
+                        <Link to="/privacidad" className={styles.bottomLink}>Privacidad</Link>
+                        <Link to="/aviso-legal" className={styles.bottomLink}>Aviso Legal</Link>
+                        <Link to="/terminos-venta" className={styles.bottomLink}>Términos</Link>
+                        <span className={styles.bottomSep} />
+                        <a href="https://www.9nau.com" target="_blank" rel="noreferrer" className={styles.designerLink}>Hecho por naŭ</a>
+                    </div>
                 </div>
             </div>
         </footer>
