@@ -7,8 +7,12 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.gridSpacer {
+    display: block;
 }
 
 .heading {
@@ -169,6 +173,10 @@
     .grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .gridSpacer {
+        display: none;
     }
 
     .bottom {

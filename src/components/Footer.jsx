@@ -14,13 +14,14 @@ const Footer = () => {
                         <p className={styles.tagline}>Si la naturaleza está bien, nosotros también.</p>
                     </div>
 
+                    <span className={styles.gridSpacer} />
+
                     <div className={styles.footerList}>
                         <h4 className={styles.heading}>Navegación</h4>
                         <ul className={styles.linkList}>
                             <li><Link to="/familia" className={styles.link}>Familia</Link></li>
                             <li><a href="/#biodiversidad" className={styles.link}>Biodiversidad</a></li>
                             <li><Link to="/cronicas" className={styles.link}>Crónicas</Link></li>
-                            <li><Link to="/bio" className={styles.link}>Bio</Link></li>
                         </ul>
                     </div>
 
@@ -61,7 +62,7 @@ const Footer = () => {
                         <Link to="/aviso-legal" className={styles.bottomLink}>Aviso Legal</Link>
                         <Link to="/terminos-venta" className={styles.bottomLink}>Términos</Link>
                         <span className={styles.bottomSep} />
-                        <span className={styles.bottomText}>Hecho por </span><a href="https://www.9nau.com" target="_blank" rel="noreferrer" className={styles.designerLink}>naŭ</a>
+                        <span className={styles.bottomText}>Hecho por <a href="https://www.9nau.com" target="_blank" rel="noreferrer" className={styles.designerLink}>naŭ</a></span>
                     </div>
                 </div>
             </div>
