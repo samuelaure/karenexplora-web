@@ -17,17 +17,18 @@ const Footer = () => {
                     <div className={styles.footerList}>
                         <h4 className={styles.heading}>Navegación</h4>
                         <ul className={styles.linkList}>
-                            <li><Link to="/" className={styles.link}>Inicio</Link></li>
-                            <li><a href="/#biodiversidad" className={styles.link}>Biodiversidad</a></li>
-                            <li><a href="/#exploracion" className={styles.link}>Exploración</a></li>
-                            <li><Link to="/cronicas" className={styles.link}>Crónicas</Link></li>
                             <li><Link to="/familia" className={styles.link}>Familia</Link></li>
+                            <li><a href="/#biodiversidad" className={styles.link}>Biodiversidad</a></li>
+                            <li><Link to="/cronicas" className={styles.link}>Crónicas</Link></li>
                             <li><Link to="/bio" className={styles.link}>Bio</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.footerList}>
+                        <h4 className={styles.heading}>Organización</h4>
+                        <ul className={styles.linkList}>
                             <li><Link to="/tienda" className={styles.link}>Tienda</Link></li>
                             <li><Link to="/contacto" className={styles.link}>Contacto</Link></li>
-                            <li><Link to="/privacidad" className={styles.link}>Privacidad</Link></li>
-                            <li><Link to="/aviso-legal" className={styles.link}>Aviso Legal</Link></li>
-                            <li><Link to="/terminos-venta" className={styles.link}>Términos</Link></li>
                         </ul>
                     </div>
 
@@ -60,7 +61,7 @@ const Footer = () => {
                         <Link to="/aviso-legal" className={styles.bottomLink}>Aviso Legal</Link>
                         <Link to="/terminos-venta" className={styles.bottomLink}>Términos</Link>
                         <span className={styles.bottomSep} />
-                        <a href="https://www.9nau.com" target="_blank" rel="noreferrer" className={styles.designerLink}>Hecho por naŭ</a>
+                        <span className={styles.bottomText}>Hecho por </span><a href="https://www.9nau.com" target="_blank" rel="noreferrer" className={styles.designerLink}>naŭ</a>
                     </div>
                 </div>
             </div>
