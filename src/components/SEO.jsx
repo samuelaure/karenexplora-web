@@ -6,7 +6,7 @@ const SEO = ({
     description,
     canonical,
     type = 'website',
-    image = '/images/og-image.jpg', // Default OG image
+    image = 'https://karenexplora.com/media/og-image.jpg', // Default OG image
     noindex = false
 }) => {
     const location = useLocation();
@@ -22,6 +22,7 @@ const SEO = ({
         : 'Karen Explora | Si la naturaleza está bien, nosotros también';
 
     const defaultDescription = 'Exploramos lugares desconocidos para descubrir especies nuevas, culturas únicas y ecosistemas valiosos. Proteger lo que conocemos es nuestra misión.';
+    const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
     return (
         <Helmet>
@@ -36,14 +37,14 @@ const SEO = ({
             <meta property="og:url" content={cleanCanonical} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description || defaultDescription} />
-            <meta property="og:image" content={`${siteUrl}${image}`} />
+            <meta property="og:image" content={imageUrl} />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={cleanCanonical} />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description || defaultDescription} />
-            <meta name="twitter:image" content={`${siteUrl}${image}`} />
+            <meta name="twitter:image" content={imageUrl} />
         </Helmet>
     );
 };

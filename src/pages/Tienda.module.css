@@ -192,7 +192,7 @@
 /* === Refactored Styles for Responsiveness === */
 
 .hero {
-    background-image: url('/images/Charles-Brewer-C-1.jpg');
+    background-image: url('https://karenexplora.com/media/Charles-Brewer-C-1.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;

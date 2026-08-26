@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     /* Default background, overridden by inline style usually */
-    background-image: url('/images/auyantepuy-helicoptero.jpg');
+    background-image: url('https://karenexplora.com/media/auyantepuy-helicoptero.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -378,7 +378,7 @@
         align-items: center;
         justify-content: center;
         /* Default background, overridden by inline style usually */
-        background-image: url('/images/auyantepuy-helicoptero.jpg');
+        background-image: url('https://karenexplora.com/media/auyantepuy-helicoptero.jpg');
         background-size: cover;
         background-position: center;
         position: relative;

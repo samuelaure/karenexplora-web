@@ -28,7 +28,7 @@ const Tienda = () => {
                         {/* 
                         <FadeIn delay={0.1} className={styles.productCard}>
                             <div className={styles.productImageWrapper}>
-                                <img src="/images/sarisarinama-sinkholes-discovery.jpg" alt="Taller de Supervivencia" className={styles.productImage} />
+                                <img src="https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg" alt="Taller de Supervivencia" className={styles.productImage} />
                                 <div className={styles.productTag}>Nuevo</div>
                             </div>
                             <div className={styles.productContent}>
@@ -48,7 +48,7 @@ const Tienda = () => {
                         {/* Book Card */}
                         <FadeIn delay={0.2} className={styles.productCard}>
                             <div className={styles.productImageWrapper}>
-                                <img src="/images/libro-antropologia-dental-indios-soto.png" alt="Libro Antropología Dental" className={styles.productImage} style={{ objectFit: 'contain', padding: '2rem', background: '#f5f5f5' }} />
+                                <img src="https://karenexplora.com/media/libro-antropologia-dental-indios-soto.png" alt="Libro Antropología Dental" className={styles.productImage} style={{ objectFit: 'contain', padding: '2rem', background: '#f5f5f5' }} />
                                 <div className={styles.productTag} style={{ background: 'var(--primary)' }}>Libro Digital</div>
                             </div>
                             <div className={styles.productContent}>

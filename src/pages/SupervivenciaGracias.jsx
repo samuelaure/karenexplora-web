@@ -8,7 +8,7 @@ const SupervivenciaGracias = () => {
     return (
         <div className={styles.hero} style={{
             minHeight: '80vh',
-            background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
+            background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             paddingTop: 'calc(var(--navbar-height) + 4rem)',

@@ -23,7 +23,7 @@ const Supervivencia = () => {
             />
             {/* Hero Section */}
             <header className={styles.hero} style={{
-                background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("/images/sarisarinama-sinkholes-discovery.jpg")',
+                background: 'linear-gradient(135deg, rgba(26, 36, 26, 0.9) 0%, rgba(47, 62, 43, 0.8) 100%), url("https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 paddingTop: 'calc(var(--navbar-height) + 8rem)',

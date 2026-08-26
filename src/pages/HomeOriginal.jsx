@@ -22,7 +22,7 @@ const Home = () => {
         <div>
             <SEO />
             {/* Hero Section */}
-            <header className={styles.hero} style={{ backgroundImage: "url('/images/auyantepuy-tepui-venezuela.jpg')" }}>
+            <header className={styles.hero} style={{ backgroundImage: "url('https://karenexplora.com/media/auyantepuy-tepui-venezuela.jpg')" }}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <FadeIn delay={0.2}>
@@ -48,7 +48,7 @@ const Home = () => {
 
             {/* Workshop Promo */}
             {/* 
-            <section id="workshop" className={styles.workshopPromo} style={{ backgroundImage: "url('/images/sarisarinama-sinkholes-discovery.jpg')" }}>
+            <section id="workshop" className={styles.workshopPromo} style={{ backgroundImage: "url('https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg')" }}>
                 <div className={styles.promoOverlay}></div>
                 <div className={`container ${styles.relative}`}>
                     <div className={styles.workshopGrid}>
@@ -77,7 +77,7 @@ const Home = () => {
                 <div className="container">
                     <div className={styles.grid2}>
                         <FadeIn direction="right">
-                            <img src="/images/libro-antropologia-dental-indios-soto.png" alt="Antropología Dental" className={styles.imgShadow} />
+                            <img src="https://karenexplora.com/media/libro-antropologia-dental-indios-soto.png" alt="Antropología Dental" className={styles.imgShadow} />
                         </FadeIn>
                         <FadeIn direction="left">
                             <span className={styles.cardTag}>Obra Destacada</span>
@@ -93,7 +93,7 @@ const Home = () => {
 
             {/* Amenazas Title */}
             {/* 
-            <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('/images/minas-guri-deforestacion-venezuela.jpg')" }}>
+            <section className={`${styles.amenazasSection} text-center`} style={{ backgroundImage: "url('https://karenexplora.com/media/minas-guri-deforestacion-venezuela.jpg')" }}>
                 <div className={styles.overlay}></div>
                 <div className={`container ${styles.relativeContent}`}>
                     <FadeIn>
@@ -117,7 +117,7 @@ const Home = () => {
 
                     <div className={styles.grid3}>
                         <a href="https://www.instagram.com/proyectosebrabavzla/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/jaguar-sebrava-venezuela.jpg" alt="Jaguares" />
+                            <img src="https://karenexplora.com/media/jaguar-sebrava-venezuela.jpg" alt="Jaguares" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Jaguares</h3>
@@ -125,7 +125,7 @@ const Home = () => {
                             </div>
                         </a>
                         <a href="https://www.fundacion-esfera.org/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/aguila-harpia-venezuela.jpg" alt="Águila Harpía" />
+                            <img src="https://karenexplora.com/media/aguila-harpia-venezuela.jpg" alt="Águila Harpía" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Águila Harpía</h3>
@@ -133,7 +133,7 @@ const Home = () => {
                             </div>
                         </a>
                         <a href="https://www.hatomasaguaral.org/" target="_blank" rel="noreferrer" className={styles.card}>
-                            <img src="/images/caiman-orinoco-venezuela.jpg" alt="Caimán del Orinoco" />
+                            <img src="https://karenexplora.com/media/caiman-orinoco-venezuela.jpg" alt="Caimán del Orinoco" />
                             <div className={styles.cardContent}>
                                 <span className={styles.cardTag}>Especies</span>
                                 <h3 className={styles.cardTitle}>Caimán del Orinoco</h3>
@@ -161,7 +161,7 @@ const Home = () => {
                             <p className={styles.textLg}>Una expedición al corazón de los tepuyes venezolanos. Documentamos el misterio de las simas y la vida que en ellas florece.</p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <img src="/images/sarisarinama-simas-landscape.jpg" alt="Sarisariñama" className={styles.imgShadow} />
+                            <img src="https://karenexplora.com/media/sarisarinama-simas-landscape.jpg" alt="Sarisariñama" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -171,7 +171,7 @@ const Home = () => {
                             <p className={styles.textLg}>Viajamos con Río Verde por todo el país para mostrar los proyectos de conservación.</p>
                         </FadeIn>
                         <FadeIn direction="right">
-                            <img src="/images/auyantepuy-tepui-venezuela.jpg" alt="Documentales" className={styles.imgShadow} />
+                            <img src="https://karenexplora.com/media/auyantepuy-tepui-venezuela.jpg" alt="Documentales" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -181,7 +181,7 @@ const Home = () => {
                             <p className={styles.textLg}>Cada expedición nos revela secretos guardados por milenios, desde nuevas especies botánicas hasta formaciones geológicas.</p>
                         </FadeIn>
                         <FadeIn direction="left">
-                            <img src="/images/sarisarinama-sinkholes-discovery.jpg" alt="Descubrimientos" className={styles.imgShadow} />
+                            <img src="https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg" alt="Descubrimientos" className={styles.imgShadow} />
                         </FadeIn>
                     </div>
 
@@ -191,7 +191,7 @@ const Home = () => {
                             <p className={styles.textLg}>Las cestas Mawadi y Esadi son portadoras de la historia y cosmovisión del pueblo Ye'Kwana.</p>
                         </FadeIn>
                         <FadeIn direction="right" className="flex justify-center">
-                            <img src="/images/cesteria-yekwana-mawadi.jpg" alt="Cestería" style={{ borderRadius: '50%', width: '80%', aspectRatio: '1', objectFit: 'cover' }} />
+                            <img src="https://karenexplora.com/media/cesteria-yekwana-mawadi.jpg" alt="Cestería" style={{ borderRadius: '50%', width: '80%', aspectRatio: '1', objectFit: 'cover' }} />
                         </FadeIn>
                     </div>
                 </div>
@@ -204,9 +204,9 @@ const Home = () => {
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Otros Libros de la Colección</h2>
                     <p className="text-center italic opacity-60" style={{ color: 'var(--text-dark)', marginBottom: '3rem' }}>Todavía no están disponibles para comprar</p>
                     <div className={styles.grid3}>
-                        <div className={styles.bookCard}><img src="/images/libro-cerro-de-la-neblina.png" alt="Libro 1" /></div>
-                        <div className={styles.bookCard}><img src="/images/libro-venezuela-es-mucho-mas.png" alt="Libro 2" /></div>
-                        <div className={styles.bookCard}><img src="/images/libro-mundo-perdido.png" alt="Libro 3" /></div>
+                        <div className={styles.bookCard}><img src="https://karenexplora.com/media/libro-cerro-de-la-neblina.png" alt="Libro 1" /></div>
+                        <div className={styles.bookCard}><img src="https://karenexplora.com/media/libro-venezuela-es-mucho-mas.png" alt="Libro 2" /></div>
+                        <div className={styles.bookCard}><img src="https://karenexplora.com/media/libro-mundo-perdido.png" alt="Libro 3" /></div>
                     </div>
                 </div>
             </section>

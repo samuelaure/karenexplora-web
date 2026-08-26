@@ -13,7 +13,7 @@
     padding-top: var(--navbar-height);
     /* Ensure dark text on light/image backgrounds unless explicitly inverted */
     overflow: hidden;
-    background-image: url('/images/minas-guri-deforestacion-venezuela.jpg');
+    background-image: url('https://karenexplora.com/media/minas-guri-deforestacion-venezuela.jpg');
     /* Fallback/Placeholder until we have a specific one, or user provided one? No, user didn't provide image. Using a dark nature one from Home */
 }
 
@@ -30,7 +30,7 @@
 
 /* Use a better image if possible or a gradient if no image fits perfectly */
 .hero {
-    background-image: url('/images/sarisarinama-sinkholes-discovery.jpg');
+    background-image: url('https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg');
 }
 
 .heroContent {
@@ -416,7 +416,7 @@
 .ctaSection {
     position: relative;
     padding: 120px 0;
-    background-image: url('/images/sarisarinama-sinkholes-discovery.jpg');
+    background-image: url('https://karenexplora.com/media/sarisarinama-sinkholes-discovery.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
