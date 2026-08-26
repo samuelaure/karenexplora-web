@@ -30,6 +30,10 @@ app.use(
     })
 );
 
+// Serve uploads directory outside root/public_html
+const uploadsPath = process.env.UPLOADS_DIR || '/home/u818556117/uploads';
+app.use('/uploads', express.static(uploadsPath));
+
 // Serve public files (like robots.txt, etc.) directly if needed
 // app.use(express.static(path.join(__dirname, 'public')));
 

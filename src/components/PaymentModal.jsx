@@ -3,6 +3,29 @@ import { X, CreditCard, Landmark, Globe, MessageSquare, Wallet } from 'lucide-re
 import styles from './PaymentModal.module.css';
 import Button from './Button';
 
+const ReportNote = ({ activeTab, vesAmount, planPrice, displayRate, planName }) => {
+    const whatsappBase = "https://wa.me/34656328436?text=";
+    const getReportMessage = () => {
+        if (activeTab === 'vzla') {
+            return `¡Hola! He realizado el pago de Bs. ${vesAmount} (equivalente a $${planPrice} USD, tasa ${displayRate}) por el plan "${planName}" vía VENEZUELA. Adjunto el comprobante.`;
+        }
+        return `¡Hola! He realizado el pago de $${planPrice} por el plan "${planName}" vía ${activeTab.toUpperCase()}. Adjunto el comprobante.`;
+    };
+    const whatsappReportLink = whatsappBase + encodeURIComponent(getReportMessage());
+
+    return (
+        <div className={styles.reportNote}>
+            <strong>IMPORTANTE:</strong> Es imprescindible que envíes el comprobante por WhatsApp.
+            Sin el reporte, no podemos identificar tu pago ni habilitar tu acceso.
+            <div className={styles.whatsappAction} style={{ marginTop: '1rem' }}>
+                <Button href={whatsappReportLink} target="_blank" variant="accent" full>
+                    <MessageSquare size={18} style={{ marginRight: '8px' }} /> Enviar Comprobante
+                </Button>
+            </div>
+        </div>
+    );
+};
+
 const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
     const [activeTab, setActiveTab] = useState('paypal'); // paypal, binance, vzla, card, iban
     const [rate, setRate] = useState(0);
@@ -27,36 +50,11 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
     const vesAmount = rate > 0 ? (planPrice * rate).toLocaleString('es-VE') : '---';
     const displayRate = rate > 0 ? rate.toLocaleString('es-VE') : '---';
 
-    const whatsappBase = "https://wa.me/34656328436?text=";
-    const ibanMessage = `Hola, me gustaría inscribirme en "${planName}" ($${planPrice}). Prefiero pagar por transferencia bancaria en Europa (IBAN).`;
-    const whatsappIbanLink = whatsappBase + encodeURIComponent(ibanMessage);
-
     const handleOverlayClick = (e) => {
         if (e.target === e.currentTarget) onClose();
     };
 
-    const getReportMessage = () => {
-        if (activeTab === 'vzla') {
-            return `¡Hola! He realizado el pago de Bs. ${vesAmount} (equivalente a $${planPrice} USD, tasa ${displayRate}) por el plan "${planName}" vía VENEZUELA. Adjunto el comprobante.`;
-        }
-        return `¡Hola! He realizado el pago de $${planPrice} por el plan "${planName}" vía ${activeTab.toUpperCase()}. Adjunto el comprobante.`;
-    };
-
-    const ReportNote = () => {
-        const whatsappReportLink = whatsappBase + encodeURIComponent(getReportMessage());
-
-        return (
-            <div className={styles.reportNote}>
-                <strong>IMPORTANTE:</strong> Es imprescindible que envíes el comprobante por WhatsApp.
-                Sin el reporte, no podemos identificar tu pago ni habilitar tu acceso.
-                <div className={styles.whatsappAction} style={{ marginTop: '1rem' }}>
-                    <Button href={whatsappReportLink} target="_blank" variant="accent" full>
-                        <MessageSquare size={18} style={{ marginRight: '8px' }} /> Enviar Comprobante
-                    </Button>
-                </div>
-            </div>
-        );
-    };
+    const reportProps = { activeTab, vesAmount, planPrice, displayRate, planName };
 
     return (
         <div className={styles.modalOverlay} onClick={handleOverlayClick}>
@@ -116,7 +114,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                 <span className={styles.detailLabel}>Monto a enviar</span>
                                 <span className={styles.detailValue}>${planPrice} USD</span>
                             </div>
-                            <ReportNote />
+                            <ReportNote {...reportProps} />
                         </div>
                     )}
 
@@ -134,7 +132,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                 <span className={styles.detailLabel}>Monto a enviar</span>
                                 <span className={styles.detailValue}>${planPrice} USDT / USD</span>
                             </div>
-                            <ReportNote />
+                            <ReportNote {...reportProps} />
                         </div>
                     )}
 
@@ -195,7 +193,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                     Estamos usando la tasa de <strong>Binance P2P</strong> (simplificada a favor del explorador) para que el proceso sea más limpio.
                                 </p>
                             </div>
-                            <ReportNote />
+                            <ReportNote {...reportProps} />
                         </div>
                     )}
 
@@ -213,7 +211,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                     Pagar con Tarjeta (Stripe)
                                 </Button>
                             </div>
-                            <ReportNote />
+                            <ReportNote {...reportProps} />
                         </div>
                     )}
 
@@ -231,7 +229,7 @@ const PaymentModal = ({ isOpen, onClose, planName, planPrice, stripeLink }) => {
                                 <span className={styles.detailLabel}>Beneficiario</span>
                                 <span className={styles.detailValue}>Samuel Aure</span>
                             </div>
-                            <ReportNote />
+                            <ReportNote {...reportProps} />
                         </div>
                     )}
                 </div>

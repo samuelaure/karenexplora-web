@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/HomeOriginal';
@@ -21,7 +21,6 @@ import TopBar from './components/TopBar';
 import NotFound from './pages/NotFound';
 
 const App = () => {
-  const location = useLocation();
   const [topBarHeight, setTopBarHeight] = useState(0);
   const [navbarHeight, setNavbarHeight] = useState(90); // Default approx height to prevent jump
 
