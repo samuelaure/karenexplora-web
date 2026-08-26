@@ -19,6 +19,7 @@ import TerminosVenta from './pages/TerminosVenta';
 import FloatingPopup from './components/FloatingPopup';
 import TopBar from './components/TopBar';
 import NotFound from './pages/NotFound';
+import Uploads from './pages/Uploads';
 
 const App = () => {
   const [topBarHeight, setTopBarHeight] = useState(0);
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/terminos-venta" element={<TerminosVenta />} />
+          <Route path="/uploads" element={<Uploads />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
