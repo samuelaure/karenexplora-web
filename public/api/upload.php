@@ -2,7 +2,7 @@
 // Set headers for CORS & JSON output
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type, X-Upload-Secret");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Content-Type: application/json; charset=UTF-8");
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -10,25 +10,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(["success" => false, "message" => "Método no permitido. Utilice POST."]);
+// Function to lookup environment variables via getenv, $_SERVER, $_ENV, or .env file fallback
+function env_lookup($name) {
+    $v = getenv($name);
+    if ($v !== false && $v !== '') return $v;
+    if (!empty($_SERVER[$name])) return $_SERVER[$name];
+    if (!empty($_ENV[$name])) return $_ENV[$name];
+
+    // Fallback: Check if .env exists in DOCUMENT_ROOT or parent directories
+    $docRoot = $_SERVER['DOCUMENT_ROOT'] ?? __DIR__;
+    $possibleEnvFiles = [
+        $docRoot . '/.env',
+        $docRoot . '/../.env',
+        __DIR__ . '/../../.env',
+        __DIR__ . '/../../../.env'
+    ];
+
+    foreach ($possibleEnvFiles as $file) {
+        if (file_exists($file) && is_readable($file)) {
+            $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                $line = trim($line);
+                if (empty($line) || strpos($line, '#') === 0) continue;
+                if (strpos($line, '=') !== false) {
+                    list($k, $val) = explode('=', $line, 2);
+                    if (trim($k) === $name) {
+                        return trim(trim($val), '"\'');
+                    }
+                }
+            }
+        }
+    }
+    return null;
+}
+
+$serverSecret = env_lookup('UPLOAD_SECRET');
+$clientSecret = $_SERVER['HTTP_X_UPLOAD_SECRET'] ?? ($_POST['secret'] ?? ($_GET['secret'] ?? ''));
+
+if (empty($serverSecret)) {
+    http_response_code(503);
+    echo json_encode(["success" => false, "message" => "La contraseña del servidor no está configurada en las variables de entorno."]);
     exit();
 }
 
-// Read secret key from environment variable
-$serverSecret = getenv('UPLOAD_SECRET') ?: ($_ENV['UPLOAD_SECRET'] ?? ($_SERVER['UPLOAD_SECRET'] ?? ''));
-$clientSecret = $_SERVER['HTTP_X_UPLOAD_SECRET'] ?? ($_POST['secret'] ?? '');
+// Action: Verify PIN / Password
+if (isset($_GET['action']) && $_GET['action'] === 'verify') {
+    if (!empty($clientSecret) && $clientSecret === $serverSecret) {
+        http_response_code(200);
+        echo json_encode(["success" => true, "message" => "Autenticado correctamente."]);
+    } else {
+        http_response_code(401);
+        echo json_encode(["success" => false, "message" => "Contraseña incorrecta."]);
+    }
+    exit();
+}
 
-if (empty($serverSecret)) {
-    http_response_code(500);
-    echo json_encode(["success" => false, "message" => "UPLOAD_SECRET no está configurado en las variables de entorno del hosting."]);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(["success" => false, "message" => "Método no permitido."]);
     exit();
 }
 
 if ($clientSecret !== $serverSecret) {
     http_response_code(401);
-    echo json_encode(["success" => false, "message" => "Clave de seguridad inválida."]);
+    echo json_encode(["success" => false, "message" => "Contraseña incorrecta."]);
     exit();
 }
 
@@ -41,7 +86,7 @@ if (empty($_FILES['files'])) {
 // Target directory: ../media/ (relative to public_html/api/)
 $targetDir = realpath(__DIR__ . '/../media');
 if (!$targetDir) {
-    $targetDir = $_SERVER['DOCUMENT_ROOT'] . '/media';
+    $targetDir = ($_SERVER['DOCUMENT_ROOT'] ?? __DIR__) . '/media';
 }
 
 if (!file_exists($targetDir)) {
@@ -52,7 +97,6 @@ $allowedExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'svg', 'pdf', 'doc', 
 $uploadedFiles = [];
 $errors = [];
 
-// Handle single or multiple file upload structures
 $files = $_FILES['files'];
 $fileCount = is_array($files['name']) ? count($files['name']) : 1;
 
@@ -72,7 +116,6 @@ for ($i = 0; $i < $fileCount; $i++) {
         continue;
     }
 
-    // Sanitize filename (preserve extension, replace special chars)
     $filenameBase = pathinfo($name, PATHINFO_FILENAME);
     $sanitizedBase = preg_replace('/[^a-zA-Z0-9_-]/', '-', $filenameBase);
     $sanitizedBase = preg_replace('/-+/', '-', trim($sanitizedBase, '-'));
@@ -83,7 +126,6 @@ for ($i = 0; $i < $fileCount; $i++) {
     $finalFilename = $sanitizedBase . '.' . $ext;
     $destination = $targetDir . '/' . $finalFilename;
 
-    // Append timestamp if file already exists
     if (file_exists($destination)) {
         $finalFilename = $sanitizedBase . '-' . time() . '.' . $ext;
         $destination = $targetDir . '/' . $finalFilename;

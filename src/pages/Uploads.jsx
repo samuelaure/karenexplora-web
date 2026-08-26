@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { UploadCloud, CheckCircle, Copy, X, Lock, FileText, Loader2 } from 'lucide-react';
 import styles from './Uploads.module.css';
 import Button from '../components/Button';
@@ -6,7 +6,8 @@ import SEO from '../components/SEO';
 
 const Uploads = () => {
     const [secret, setSecret] = useState(() => sessionStorage.getItem('upload_secret') || '');
-    const [isAuthenticated, setIsAuthenticated] = useState(() => !!sessionStorage.getItem('upload_secret'));
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isVerifying, setIsVerifying] = useState(false);
     const [files, setFiles] = useState([]);
     const [isUploading, setIsUploading] = useState(false);
     const [uploadedUrls, setUploadedUrls] = useState([]);
@@ -15,15 +16,48 @@ const Uploads = () => {
     const [copied, setCopied] = useState(false);
     const fileInputRef = useRef(null);
 
+    // Auto-verify stored secret on mount if present
+    useEffect(() => {
+        const storedSecret = sessionStorage.getItem('upload_secret');
+        if (storedSecret) {
+            verifyPassword(storedSecret);
+        }
+    }, []);
+
+    const verifyPassword = async (pwd) => {
+        setIsVerifying(true);
+        setError('');
+        try {
+            const res = await fetch('/api/upload.php?action=verify', {
+                method: 'POST',
+                headers: {
+                    'X-Upload-Secret': pwd
+                }
+            });
+            const data = await res.json();
+            if (res.ok && data.success) {
+                setIsAuthenticated(true);
+                sessionStorage.setItem('upload_secret', pwd);
+            } else {
+                setIsAuthenticated(false);
+                sessionStorage.removeItem('upload_secret');
+                setError(data.message || 'Contraseña incorrecta.');
+            }
+        } catch (err) {
+            console.error('Auth verification error:', err);
+            setError('Error al conectar con el servidor.');
+        } finally {
+            setIsVerifying(false);
+        }
+    };
+
     const handleAuthSubmit = (e) => {
         e.preventDefault();
         if (!secret.trim()) {
-            setError('Ingresa la clave de acceso de Hostinger.');
+            setError('Ingresa la contraseña.');
             return;
         }
-        sessionStorage.setItem('upload_secret', secret.trim());
-        setIsAuthenticated(true);
-        setError('');
+        verifyPassword(secret.trim());
     };
 
     const handleFileSelect = (e) => {
@@ -96,7 +130,7 @@ const Uploads = () => {
             }
         } catch (err) {
             console.error('Upload Error:', err);
-            setError('Error de conexión o fallo en el servidor PHP.');
+            setError('Error de conexión o fallo en el servidor.');
         } finally {
             setIsUploading(false);
         }
@@ -124,7 +158,7 @@ const Uploads = () => {
 
             <h1 className={styles.title}>Gestor de Archivos</h1>
             <p className={styles.subtitle}>
-                Carga imágenes y documentos directamente a <code>karenexplora.com/media/</code>
+                Subida y gestión de imágenes y documentos para el sitio web.
             </p>
 
             {error && <div className={`${styles.alert} ${styles.alertError}`}>{error}</div>}
@@ -136,19 +170,26 @@ const Uploads = () => {
                         <div className={styles.inputGroup}>
                             <label className={styles.label}>
                                 <Lock size={16} style={{ display: 'inline', marginRight: '6px' }} />
-                                Clave de acceso (UPLOAD_SECRET)
+                                Contraseña
                             </label>
                             <input
                                 type="password"
                                 className={styles.input}
                                 value={secret}
                                 onChange={(e) => setSecret(e.target.value)}
-                                placeholder="Ingresa tu UPLOAD_SECRET de Hostinger"
+                                placeholder="Ingresa tu contraseña"
                                 required
                             />
                         </div>
-                        <Button type="submit" variant="primary" full>
-                            Ingresar
+                        <Button type="submit" variant="primary" full disabled={isVerifying}>
+                            {isVerifying ? (
+                                <>
+                                    <Loader2 size={18} className="spin" style={{ marginRight: '8px' }} />
+                                    Verificando...
+                                </>
+                            ) : (
+                                'Ingresar'
+                            )}
                         </Button>
                     </form>
                 </div>
@@ -170,7 +211,7 @@ const Uploads = () => {
                             />
                             <UploadCloud size={48} className={styles.dropIcon} />
                             <div className={styles.dropText}>
-                                Arrastra y suelta archivos aquí o <span style={{ color: 'var(--accent)' }}>haz clic para explorar</span>
+                                Arrastra y suelta tus archivos aquí o <span style={{ color: 'var(--accent)' }}>haz clic para explorar</span>
                             </div>
                             <div className={styles.dropSubtext}>
                                 Formatos permitidos: JPG, PNG, WEBP, GIF, SVG, PDF, DOCX, MP4, ZIP
