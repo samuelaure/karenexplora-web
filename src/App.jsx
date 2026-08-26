@@ -20,6 +20,7 @@ import FloatingPopup from './components/FloatingPopup';
 import TopBar from './components/TopBar';
 import NotFound from './pages/NotFound';
 import Uploads from './pages/Uploads';
+import GithubInvite from './pages/GithubInvite';
 
 const App = () => {
   const [topBarHeight, setTopBarHeight] = useState(0);
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/terminos-venta" element={<TerminosVenta />} />
           <Route path="/uploads" element={<Uploads />} />
+          <Route path="/github" element={<GithubInvite />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
