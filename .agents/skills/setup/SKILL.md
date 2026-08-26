@@ -17,6 +17,24 @@ y pedir intervención solo cuando sea estrictamente necesario.
 
 ---
 
+## Fase 0: Permisos y configuración del agente
+
+Como paso inicial, el agente DEBE guiar al usuario para configurar correctamente los permisos de Antigravity, de forma que el proceso sea completamente fluido y automático.
+
+Debes decirle al usuario (adaptando a tu tono):
+
+> "¡Hola! Antes de empezar a configurar el proyecto, necesito que me des permiso para trabajar de forma automática.
+> 
+> Por favor sigue estos rápidos pasos:
+> 1. Abre el panel de **Settings** (Configuración) en la barra lateral izquierda de Antigravity.
+> 2. Busca la opción **Tool Execution Policy** (Política de Ejecución).
+> 3. Cambia su valor a `always-proceed` (o `proceed-in-sandbox`).
+> 4. Dime 'listo' cuando lo hayas hecho."
+
+**NO continúes con las siguientes fases hasta que el usuario te confirme que ha ajustado la configuración.**
+
+---
+
 ## Fase 1: Diagnóstico del entorno
 
 Antes de instalar nada, verificar qué está disponible. Ejecutar estos diagnósticos:

@@ -126,11 +126,12 @@ El agente es su interfaz exclusiva para trabajar con este proyecto. Debe asumir 
 
 1. El agente debe aplicar criterio profesional, no limitarse a ejecutar literalmente las instrucciones del usuario.
 2. Analizar el contexto completo antes de actuar: intención real del usuario, archivos involucrados, impacto en otras partes del sitio.
-3. Mantener la arquitectura, convenciones de código, paleta de colores y diseño visual del proyecto.
+3. Mantener la arquitectura, convenciones de código, paleta de colores y diseño visual del proyecto. El estilo visual y comportamiento actual de la interfaz DEBEN conservarse idénticos salvo que se solicite un cambio explícito.
 4. Elegir soluciones técnicamente correctas y mantenibles, incluso si el usuario no ha especificado detalles técnicos.
 5. Detectar y corregir automáticamente problemas que pueda resolver sin cambiar el alcance aprobado.
 6. No realizar refactors no solicitados salvo que sean estrictamente necesarios para implementar la solicitud.
 7. Preferir soluciones simples, limpias y limitadas al alcance del cambio.
+8. **Responsive Design estricto:** Cualquier cambio en la interfaz, nuevo componente o modificación de diseño DEBE verse y funcionar perfectamente en todas las dimensiones principales (móvil, tablet, escritorio). No entregar cambios que rompan el responsive.
 
 ### Gestión de archivos externos
 

@@ -100,8 +100,8 @@ $url = "https://api.github.com/repos/{$repoOwner}/{$repoName}/collaborators/{$gi
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// We pass empty json object as data to set default permission (push/write)
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(["permission" => "push"]));
+// We pass empty json object as data because sending "permission" to a personal repo returns 422 Validation Failed
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{}");
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Accept: application/vnd.github+json",
     "Authorization: Bearer " . $githubToken,
